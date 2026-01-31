@@ -198,8 +198,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSpeed: 5
+  projectionDistance: 5
   rigidBody: {fileID: 81960202200308833}
   projection: {fileID: 4183040367945290189}
+  projectionTimeLength: 10
 --- !u!50 &81960202200308833
 Rigidbody2D:
   serializedVersion: 4

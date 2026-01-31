@@ -5,14 +5,12 @@ using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
-
-    // TODO: make a circle that shows the projection radius
-
     // fields
     [SerializeField] private float playerSpeed = 2;
     [SerializeField] private float projectionDistance = 5;
     [SerializeField] private Rigidbody2D rigidBody;
     [SerializeField] private GameObject projection;
+    [SerializeField] private GameObject projectionRadius;
     [SerializeField] private float projectionTimeLength;
 
     // internal fields (things like these should only be for completing stuff within player)
@@ -74,9 +72,15 @@ public class Player : MonoBehaviour
             projectionBody.MovePosition(playerPosition +    
                 Vector2.ClampMagnitude((projectionPosition - playerPosition) + ((movementDirection * playerSpeed) * Time.fixedDeltaTime), 
                 projectionDistance));
+
+            // move the projection radius and resize it accordingly
+            projectionRadius.transform.position = transform.position;
+            projectionRadius.transform.localScale = new Vector3(projectionDistance * 2, projectionDistance * 2, 1);
         }
     }
-
+    /// <summary>
+    /// Manage anything that solely the projection relies on per-frame.
+    /// </summary>
     private void CheckProjection()
     {
         // only do something if projecting
@@ -101,11 +105,13 @@ public class Player : MonoBehaviour
         {
             isProjecting = false;
             projection.SetActive(false);
+            projectionRadius.SetActive(false);
             projectionTimer = 0;
         }
         else
         {
             isProjecting = true;
+            projectionRadius.SetActive(true);
             projection.SetActive(true);
         }
     }
