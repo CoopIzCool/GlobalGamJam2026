@@ -72,9 +72,9 @@ public class Player : MonoBehaviour
             Vector2 projectionPosition = (Vector2)projection.transform.position;
 
             // Move the projection by its rigidbody from its previous position, clamped by projectionDistance
-            projectionBody.MovePosition(playerPosition + 
-                Vector2.ClampMagnitude((projectionPosition - playerPosition) + 
-                ((movementDirection * playerSpeed) * Time.fixedDeltaTime), projectionDistance));
+            projectionBody.MovePosition(playerPosition +    
+                Vector2.ClampMagnitude((projectionPosition - playerPosition) + ((movementDirection * playerSpeed) * Time.fixedDeltaTime), 
+                projectionDistance));
         }
     }
     #region Gizmos
