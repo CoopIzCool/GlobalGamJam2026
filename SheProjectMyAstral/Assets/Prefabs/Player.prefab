@@ -204,6 +204,7 @@ MonoBehaviour:
   projection: {fileID: 4183040367945290189}
   projectionRadius: {fileID: 7202150573479220152}
   projectionTimeLength: 10
+  HUD: {fileID: 0}
 --- !u!50 &81960202200308833
 Rigidbody2D:
   serializedVersion: 4

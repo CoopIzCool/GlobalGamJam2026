@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     [SerializeField] private GameObject projection;
     [SerializeField] private GameObject projectionRadius;
     [SerializeField] private float projectionTimeLength;
+    [SerializeField] private Canvas HUD;
 
     // internal fields (things like these should only be for completing stuff within player)
     private Vector2 movementDirection;
@@ -28,6 +29,7 @@ public class Player : MonoBehaviour
     {
         Move();
         CheckProjection();
+        UpdateExternal();
     }
     /// <summary>
     /// Gets the direction of context to use in Move and other functions.
@@ -49,6 +51,14 @@ public class Player : MonoBehaviour
     /// <summary>
     /// Moves the player and projection around.
     /// </summary>
+    private void UpdateExternal()
+    {
+        if (HUD != null)
+        {
+            HUD.GetComponent<HUD>().SetProjectionTimer(projectionTimer, projectionTimeLength);
+
+        }
+    }
     private void Move()
     {
         // player movement
