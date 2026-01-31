@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      neo_zero_buildings__lights_off_02_0: -4479398194301815980
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
