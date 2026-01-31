@@ -370,7 +370,18 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      neo_zero_dungeon_02_0: 7188330077584480586
+      neo_zero_dungeon_02_1: 9094488889857040752
+      neo_zero_dungeon_02_10: -6241323678679915631
+      neo_zero_dungeon_02_2: -7060162220135441006
+      neo_zero_dungeon_02_3: -65849111830389595
+      neo_zero_dungeon_02_4: -3063498935521398298
+      neo_zero_dungeon_02_5: -5690074218872394551
+      neo_zero_dungeon_02_6: 769696856348137702
+      neo_zero_dungeon_02_7: -5560355656691670897
+      neo_zero_dungeon_02_8: -4229113349081611251
+      neo_zero_dungeon_02_9: 5638251792403400874
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -298,7 +298,15 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      neo_zero_tileset_02_0: -429992651641216203
+      neo_zero_tileset_02_1: -5342827491108773432
+      neo_zero_tileset_02_2: -6017534423171670848
+      neo_zero_tileset_02_3: 6980906829486838297
+      neo_zero_tileset_02_4: 4247288546586427417
+      neo_zero_tileset_02_5: -1762548045046933903
+      neo_zero_tileset_02_6: -8089347364027996554
+      neo_zero_tileset_02_7: 4959959667871837801
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

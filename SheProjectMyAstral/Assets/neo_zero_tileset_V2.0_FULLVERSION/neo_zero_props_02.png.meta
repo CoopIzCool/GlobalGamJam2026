@@ -1354,7 +1354,59 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      neo_zero_props_02_0: -293191339024211676
+      neo_zero_props_02_1: -8883605426200211357
+      neo_zero_props_02_10: 8969683529777743827
+      neo_zero_props_02_11: -3774496606785777810
+      neo_zero_props_02_12: -8535910937635721061
+      neo_zero_props_02_13: -6121543103460693391
+      neo_zero_props_02_14: -3939487869819891757
+      neo_zero_props_02_15: 7832167084284490
+      neo_zero_props_02_16: -919877487411218719
+      neo_zero_props_02_17: 3782102736350582011
+      neo_zero_props_02_18: 1603948605797092972
+      neo_zero_props_02_19: -8186213254170965650
+      neo_zero_props_02_2: -2700300471823294092
+      neo_zero_props_02_20: -2229489655730266159
+      neo_zero_props_02_21: 6853547407466610703
+      neo_zero_props_02_22: -6908773347983045435
+      neo_zero_props_02_23: 8165340611226425965
+      neo_zero_props_02_24: -8183656350246269779
+      neo_zero_props_02_25: -370040117677583330
+      neo_zero_props_02_26: 7418089977664174365
+      neo_zero_props_02_27: -6983226171460259424
+      neo_zero_props_02_28: -7535680161887491411
+      neo_zero_props_02_29: 8979662401490543452
+      neo_zero_props_02_3: 7060651204137469783
+      neo_zero_props_02_30: 3215519717590420413
+      neo_zero_props_02_31: 4244371411569753674
+      neo_zero_props_02_32: -3498490768262729245
+      neo_zero_props_02_33: 2302176011843242142
+      neo_zero_props_02_34: 6807869362597619217
+      neo_zero_props_02_35: -259415123462141381
+      neo_zero_props_02_36: 4760313715563958815
+      neo_zero_props_02_37: 8802368283607113362
+      neo_zero_props_02_38: 5152949305692568385
+      neo_zero_props_02_39: 5746830744686003880
+      neo_zero_props_02_4: -6129136568552663857
+      neo_zero_props_02_40: -1028962387421648238
+      neo_zero_props_02_41: -595883534769328530
+      neo_zero_props_02_42: 3976332737953403972
+      neo_zero_props_02_43: -7603176733645653387
+      neo_zero_props_02_44: -7801073530020113118
+      neo_zero_props_02_45: -863175782526194368
+      neo_zero_props_02_46: -978864623274832633
+      neo_zero_props_02_47: 4609165810759111389
+      neo_zero_props_02_48: -5321626985331717013
+      neo_zero_props_02_49: -4339980872510689655
+      neo_zero_props_02_5: 7177246377550981647
+      neo_zero_props_02_50: -2354522426748112532
+      neo_zero_props_02_51: -2215785878809035150
+      neo_zero_props_02_6: 4989212215284673165
+      neo_zero_props_02_7: -6985453194029585527
+      neo_zero_props_02_8: -1747816836030661898
+      neo_zero_props_02_9: -7475701208266054506
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

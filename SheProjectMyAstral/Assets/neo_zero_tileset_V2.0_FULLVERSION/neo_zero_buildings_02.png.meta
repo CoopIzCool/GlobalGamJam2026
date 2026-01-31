@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      neo_zero_buildings_02_0: -9188201876158564364
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
