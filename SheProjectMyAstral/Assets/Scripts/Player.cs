@@ -66,12 +66,14 @@ public class Player : MonoBehaviour
         // projection movement
         else
         {
-            // grab the rigidbody to make the code cleaner
+            // rename some variables to make the code cleaner
             Rigidbody2D projectionBody = projection.GetComponent<Rigidbody2D>();
+            Vector2 playerPosition = (Vector2)transform.position;
+            Vector2 projectionPosition = (Vector2)projection.transform.position;
 
             // Move the projection by its rigidbody from its previous position, clamped by projectionDistance
-            projectionBody.MovePosition((Vector2)transform.position + 
-                Vector2.ClampMagnitude(((Vector2)projection.transform.position - (Vector2) transform.position) + 
+            projectionBody.MovePosition(playerPosition + 
+                Vector2.ClampMagnitude((projectionPosition - playerPosition) + 
                 ((movementDirection * playerSpeed) * Time.fixedDeltaTime), projectionDistance));
         }
     }
