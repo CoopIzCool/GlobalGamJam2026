@@ -13,6 +13,8 @@ public class Player : MonoBehaviour
     [SerializeField] private GameObject projectionRadius;
     [SerializeField] private float projectionTimeLength;
     [SerializeField] private Canvas HUD;
+    [SerializeField] private SpriteRenderer playerSprite;
+    [SerializeField] private SpriteRenderer projectionSprite;
 
     // internal fields (things like these should only be for completing stuff within player)
     private Vector2 movementDirection;
@@ -56,7 +58,14 @@ public class Player : MonoBehaviour
         if (HUD != null)
         {
             HUD.GetComponent<HUD>().SetProjectionTimer(projectionTimer, projectionTimeLength);
-
+        }
+        if (projectionSprite != null)
+        {
+            // invert the player sprite and put it on the projection
+            SpriteRenderer invertedSprite = projectionSprite;
+            invertedSprite.sprite = playerSprite.sprite;
+            invertedSprite.color = new Color(1 - playerSprite.color.r,1 - playerSprite.color.g, 1 - playerSprite.color.b);
+            projectionSprite.sprite = invertedSprite.sprite;
         }
     }
     private void Move()
