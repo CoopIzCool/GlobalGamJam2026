@@ -6,7 +6,7 @@ using System;
 public class MarioColorSwitchButton : BaseButtonScript
 {
     [Serializable]
-    public struct SwtichColorContainer
+    protected struct SwtichColorContainer
     {
         public GameObject[] activeGameObjects;
         public Color SwitchColor;
@@ -14,8 +14,8 @@ public class MarioColorSwitchButton : BaseButtonScript
     }
 
     #region Fields
-    [SerializeField] private SwtichColorContainer[] switchColorContainers;
-    private int _buttonActivatedIndex = 0;
+    [SerializeField] protected SwtichColorContainer[] switchColorContainers;
+    protected int _buttonActivatedIndex = 0;
     #endregion Fields
 
     private void Start()
@@ -37,7 +37,7 @@ public class MarioColorSwitchButton : BaseButtonScript
         }
     }
 
-    public override void ButtonPressed()
+    protected override void ButtonPressed()
     {
         base.ButtonPressed();
         //If we were to have some sort of fancy transition logic to make things cool and lerp like and
@@ -53,11 +53,13 @@ public class MarioColorSwitchButton : BaseButtonScript
         //Vice Versa
         for (int i = 0; i < switchColorContainers[_buttonActivatedIndex].activeGameObjects.Length; i++)
         {
+            
+            
             switchColorContainers[_buttonActivatedIndex].activeGameObjects[i].SetActive(true);
         }
     }
 
-    private void ChangeButtonColor()
+    protected void ChangeButtonColor()
     {
         SpriteRenderer _spriteRenderer = GetComponent<SpriteRenderer>();
         _spriteRenderer.color = switchColorContainers[_buttonActivatedIndex].SwitchColor;

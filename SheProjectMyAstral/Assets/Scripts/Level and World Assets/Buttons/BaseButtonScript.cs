@@ -5,7 +5,7 @@ using UnityEngine;
 public abstract class BaseButtonScript : MonoBehaviour, I_InteractableObject
 {
     protected bool _buttonPressed = false;
-    public virtual void ButtonPressed()
+    protected virtual void ButtonPressed()
     {
         if(!_buttonPressed) 
         {
