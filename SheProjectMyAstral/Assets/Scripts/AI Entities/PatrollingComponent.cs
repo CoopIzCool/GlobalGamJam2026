@@ -48,7 +48,7 @@ public class PatrollingComponent : MonoBehaviour
             //transform.rotation = Quaternion.Slerp(startRotation, targetRotation, t);
             float intendedZRotation = Mathf.Atan2(-relativePos.x, relativePos.y) * Mathf.Rad2Deg;
             Quaternion targetRotation = Quaternion.Euler(0, 0, intendedZRotation);
-            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, _rotationSpeed);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, _rotationSpeed * Time.fixedDeltaTime);
         }
 
         if (!_pausedMovement)
