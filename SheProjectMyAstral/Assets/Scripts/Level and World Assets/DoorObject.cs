@@ -31,10 +31,13 @@ public class DoorObject : MonoBehaviour
         //Door Opening Logic here
         if (_bDoorOpening)
         {
-            transform.position = Vector3.Lerp(transform.position, doorOpenLocation.position, doorOpeningSpeed * Time.fixedDeltaTime);
-            if(Vector2.Distance(transform.position, doorOpenLocation.position) <= 0.5f)
+            if (Vector2.Distance(transform.position, doorOpenLocation.position) <= 0.5f)
             {
                 _bDoorOpening = false;
+            }
+            else
+            {
+                transform.position = Vector3.Lerp(transform.position, doorOpenLocation.position, doorOpeningSpeed * Time.fixedDeltaTime);
             }
         }
     }

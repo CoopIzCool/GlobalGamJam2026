@@ -12,6 +12,10 @@ public class DoorOpeningButton : BaseButtonScript
     {
         base.ButtonPressed();
         //Add door open command
-        _buttonPressed = doorAnswer.OpenDoorCheck();
+        if(_buttonPressed)
+        {
+            _buttonPressed = doorAnswer.OpenDoorCheck();
+        }
+
     }
 }

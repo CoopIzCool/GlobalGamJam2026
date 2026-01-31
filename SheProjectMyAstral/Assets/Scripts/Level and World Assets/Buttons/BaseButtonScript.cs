@@ -4,11 +4,14 @@ using UnityEngine;
 
 public abstract class BaseButtonScript : MonoBehaviour, I_InteractableObject
 {
-    protected bool _buttonPressed;
+    protected bool _buttonPressed = false;
     public virtual void ButtonPressed()
     {
-        _buttonPressed = true;
-        Debug.Log("Button Pressed");
+        if(!_buttonPressed) 
+        {
+            _buttonPressed = true;
+            Debug.Log("Button Pressed");
+        }
     }
 
     public void Interact()
@@ -17,8 +20,9 @@ public abstract class BaseButtonScript : MonoBehaviour, I_InteractableObject
     }
 
     //Yeah this is weird abstraction. We may be doing weird 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         Interact();
     }
+
 }
