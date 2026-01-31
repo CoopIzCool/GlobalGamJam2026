@@ -5,14 +5,19 @@ using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
+
+    // TODO: make a circle that shows the projection radius
+
     // fields
     [SerializeField] private float playerSpeed = 2;
     [SerializeField] private float projectionDistance = 5;
     [SerializeField] private Rigidbody2D rigidBody;
     [SerializeField] private GameObject projection;
+    [SerializeField] private float projectionTimeLength;
 
     // internal fields (things like these should only be for completing stuff within player)
     private Vector2 movementDirection;
+    private float projectionTimer;
     private bool isProjecting = false; // should be replaced once there's a gamestate for it
 
     // Start is called before the first frame update
@@ -24,6 +29,7 @@ public class Player : MonoBehaviour
     private void FixedUpdate()
     {
         Move();
+        CheckProjection();
     }
     /// <summary>
     /// Gets the direction of context to use in Move and other functions.
@@ -33,20 +39,13 @@ public class Player : MonoBehaviour
     {
         movementDirection = context.ReadValue<Vector2>();
     }
-
+    /// <summary>
+    /// Gets the key to toggle projection.
+    /// </summary>
+    /// <param name="context">button input</param>
     public void OnProject(InputAction.CallbackContext context)
     {
-        // toggle projection
-        if (isProjecting)
-        {
-            isProjecting = false;
-            projection.SetActive(false);
-        }
-        else
-        {
-            isProjecting = true;
-            projection.SetActive(true);
-        }
+        SetProjection();
     }
 
     /// <summary>
@@ -75,6 +74,39 @@ public class Player : MonoBehaviour
             projectionBody.MovePosition(playerPosition +    
                 Vector2.ClampMagnitude((projectionPosition - playerPosition) + ((movementDirection * playerSpeed) * Time.fixedDeltaTime), 
                 projectionDistance));
+        }
+    }
+
+    private void CheckProjection()
+    {
+        // only do something if projecting
+        if (isProjecting)
+        {
+            projectionTimer += Time.fixedDeltaTime;
+            // Debug.Log(projectionTimer);
+            // forcefully stop projecting after projectionTimeLength seconds
+            if (projectionTimer >= projectionTimeLength)
+            {
+                SetProjection();
+            }
+        }
+    }
+    /// <summary>
+    /// Sets the projection, and changes anything that goes with it.
+    /// </summary>
+    private void SetProjection()
+    {
+        // toggle projection
+        if (isProjecting)
+        {
+            isProjecting = false;
+            projection.SetActive(false);
+            projectionTimer = 0;
+        }
+        else
+        {
+            isProjecting = true;
+            projection.SetActive(true);
         }
     }
     #region Gizmos
