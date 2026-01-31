@@ -81,7 +81,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _layerMask:
     serializedVersion: 2
-    m_Bits: 9
+    m_Bits: 137
   _rayCount: 20
   _seekerAi: {fileID: 7425550092021312316}
 --- !u!23 &9110483024088595252

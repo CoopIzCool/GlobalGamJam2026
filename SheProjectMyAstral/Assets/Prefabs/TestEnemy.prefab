@@ -109,7 +109,7 @@ MonoBehaviour:
     m_Bits: 126
   blockingLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   bufferTime: 0.2
   stubborn: 0
   viewDebugLines: 1
