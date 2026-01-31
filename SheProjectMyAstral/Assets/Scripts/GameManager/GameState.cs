@@ -6,7 +6,8 @@ using UnityEngine;
 [Serializable]
 public abstract class GameState
 {
-    [SerializeField] protected string Name = "DefaultStateName";
+    [SerializeField] protected string name = "DefaultStateName";
+    public string Name {  get { return name; } }
     /// <summary>
     /// Called on a state being entered, perform any startup actions here.
     /// </summary>

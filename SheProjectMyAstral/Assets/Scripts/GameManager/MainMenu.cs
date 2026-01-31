@@ -8,6 +8,7 @@ public class MainMenu : GameState
 {
     public override void OnEnter()
     {
+        Debug.Log($"Entered {name}.");
     }
 
     public override void OnExit()
