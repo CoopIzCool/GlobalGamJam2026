@@ -27,6 +27,8 @@ public class GameManager : Singleton<GameManager>
 
     [SerializeField] private GameState currentState;                        //State of the game we are currently in.
     [SerializeField] public Dictionary<string, GameState> stateDictionary;  //All possible states are stored in here after Awake().
+
+    public GameState CurrentState { get { return currentState; } }          //Returns the currentState
     
 
     /// <summary>
@@ -52,6 +54,8 @@ public class GameManager : Singleton<GameManager>
 
     private void Start()
     {
+        //TESTING BELOW:
+
         if (stateDictionary["MainMenu"] != null)
         {
             Debug.Log("MainMenu detected!");
@@ -60,6 +64,20 @@ public class GameManager : Singleton<GameManager>
         {
             Debug.Log("OtherMenu detected!");
         }
+
+        Debug.Log("Current state is: " + currentState.Name);
+
+        Debug.Log("Transition from current to 'OtherMenu'.");
+        TransitionTo("OtherMenu");
+
+        Debug.Log("Transition from current to 'OtherMenu' again...");
+        TransitionTo("OtherMenu");
+
+        Debug.Log("Transition from current to 'MainMenu'.");
+        TransitionTo("MainMenu");
+
+        Debug.Log("Transition from current to 'MadeUpFakeState'");
+        TransitionTo("MadeUpFakeState");
     }
 
     /// <summary>
@@ -70,7 +88,17 @@ public class GameManager : Singleton<GameManager>
     /// <param name="StateName"></param>
     public void TransitionTo(string StateName)
     {
-        GameState nextState = stateDictionary[StateName];
+        GameState nextState;
+        if ( (nextState = stateDictionary[StateName]) == null)
+        {
+            Debug.LogError($"{StateName} is not a valid state, Transition failed!");
+            return;
+        }
+        else if (nextState == currentState)
+        {
+            Debug.LogError($"{StateName} is the same as the current state, Transition failed!");
+            return;
+        }
 
         currentState.OnExit();
         currentState = nextState;
