@@ -226,7 +226,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!1 &7122545639578870780
 GameObject:
   m_ObjectHideFlags: 0
@@ -360,6 +360,10 @@ PrefabInstance:
     - target: {fileID: 3185752705068590723, guid: 198420578e1dd624abe7a7a2f536f8bf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4979617997676314878, guid: 198420578e1dd624abe7a7a2f536f8bf, type: 3}
+      propertyPath: m_Constraints
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 9146242875450744090, guid: 198420578e1dd624abe7a7a2f536f8bf, type: 3}
       propertyPath: m_Name
