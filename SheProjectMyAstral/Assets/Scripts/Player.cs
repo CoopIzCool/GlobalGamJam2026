@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
 {
     // fields
     [SerializeField] private float playerSpeed = 2;
+    [SerializeField] private float projectionDistance = 5;
     [SerializeField] private Rigidbody2D rigidBody;
     [SerializeField] private GameObject projection;
 
@@ -68,8 +69,17 @@ public class Player : MonoBehaviour
             // grab the rigidbody to make the code cleaner
             Rigidbody2D projectionBody = projection.GetComponent<Rigidbody2D>();
 
-            // Move the projection by its rigidbody from its previous position.
-            projectionBody.MovePosition((Vector2)projection.transform.position + ((movementDirection * playerSpeed) * Time.fixedDeltaTime));
+            // Move the projection by its rigidbody from its previous position, clamped by projectionDistance
+            projectionBody.MovePosition((Vector2)transform.position + 
+                Vector2.ClampMagnitude(((Vector2)projection.transform.position - (Vector2) transform.position) + 
+                ((movementDirection * playerSpeed) * Time.fixedDeltaTime), projectionDistance));
         }
     }
+    #region Gizmos
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.white;
+        Gizmos.DrawWireSphere(transform.position, projectionDistance);
+    }
+    #endregion
 }
