@@ -19,9 +19,8 @@ public class Player : MonoBehaviour
     {
         
     }
-
-    // Update is called once per frame
-    void Update()
+    // FixedUpdate is where player logic is run
+    private void FixedUpdate()
     {
         Move();
     }
@@ -58,7 +57,7 @@ public class Player : MonoBehaviour
         if (!isProjecting)
         {
             // Move the player by its rigidbody from its previous position.
-            rigidBody.MovePosition((Vector2)transform.position + ((movementDirection * playerSpeed) * Time.deltaTime));
+            rigidBody.MovePosition((Vector2)transform.position + ((movementDirection * playerSpeed) * Time.fixedDeltaTime));
 
             // keep the projection and player together when not projecting
             projection.transform.position = transform.position;
@@ -70,7 +69,7 @@ public class Player : MonoBehaviour
             Rigidbody2D projectionBody = projection.GetComponent<Rigidbody2D>();
 
             // Move the projection by its rigidbody from its previous position.
-            projectionBody.MovePosition((Vector2)projection.transform.position + ((movementDirection * playerSpeed) * Time.deltaTime));
+            projectionBody.MovePosition((Vector2)projection.transform.position + ((movementDirection * playerSpeed) * Time.fixedDeltaTime));
         }
     }
 }

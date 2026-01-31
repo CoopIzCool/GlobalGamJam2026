@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 868008696555540276}
   - component: {fileID: 7963956299848275142}
   - component: {fileID: 81960202200308833}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79,11 +79,19 @@ MonoBehaviour:
     m_ActionId: 6db04747-b8a2-4de1-9f78-bcc8bbdb69da
     m_ActionName: 'Player/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]'
   - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: ee9ff3ae-6752-4b34-8314-10a1e70abbf1
-    m_ActionName: 'Player/Look[/Mouse/delta,/Pen/delta]'
-  - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7963956299848275142}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: OnProject
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 53809277-5cd5-4ec5-b02c-60eb33eb1651
     m_ActionName: 'Player/Fire[/Mouse/leftButton]'
   - m_PersistentCalls:
@@ -191,6 +199,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerSpeed: 5
   rigidBody: {fileID: 81960202200308833}
+  projection: {fileID: 4183040367945290189}
 --- !u!50 &81960202200308833
 Rigidbody2D:
   serializedVersion: 4
@@ -356,11 +365,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: Projection
       objectReference: {fileID: 0}
+    - target: {fileID: 9146242875450744090, guid: 198420578e1dd624abe7a7a2f536f8bf, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 198420578e1dd624abe7a7a2f536f8bf, type: 3}
+--- !u!1 &4183040367945290189 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9146242875450744090, guid: 198420578e1dd624abe7a7a2f536f8bf, type: 3}
+  m_PrefabInstance: {fileID: 4963211306024815831}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7554453394024671828 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3185752705068590723, guid: 198420578e1dd624abe7a7a2f536f8bf, type: 3}
