@@ -1,9 +1,12 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[Serializable]
 public abstract class GameState
 {
+    [SerializeField] protected string Name = "DefaultStateName";
     /// <summary>
     /// Called on a state being entered, perform any startup actions here.
     /// </summary>
