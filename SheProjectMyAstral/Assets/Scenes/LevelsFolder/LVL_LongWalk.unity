@@ -1604,6 +1604,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SuperManager
       objectReference: {fileID: 0}
+    - target: {fileID: 2410398552763798575, guid: 8f8234d063f1a6b42860fe30196ce8d0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6573638759092727373, guid: 8f8234d063f1a6b42860fe30196ce8d0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8255330895545197484, guid: 8f8234d063f1a6b42860fe30196ce8d0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.5929704
