@@ -13,12 +13,12 @@ public class NextLevelState : GameState
 
     public override void OnEnter()
     {
-        
+        EnteredEvent.Invoke();
     }
 
     public override void OnExit()
     {
-        
+        ExitEvent.Invoke();
     }
 
     public override void UpdateGameState()
