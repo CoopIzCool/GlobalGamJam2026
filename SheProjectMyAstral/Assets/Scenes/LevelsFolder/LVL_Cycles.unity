@@ -2156,7 +2156,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6311579687258617746, guid: b12e108aef63e1c479b4f94eb5c47f25, type: 3}
       propertyPath: nextLevelName
-      value: MainMenu
+      value: LVL_Jack1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3310,7 +3310,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6790369799970159571, guid: 3f32dcb3dc6d76d40a75c7b8ecd12536, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.54
+      value: -11.98
       objectReference: {fileID: 0}
     - target: {fileID: 6790369799970159571, guid: 3f32dcb3dc6d76d40a75c7b8ecd12536, type: 3}
       propertyPath: m_LocalPosition.y
@@ -22574,6 +22574,10 @@ PrefabInstance:
     - target: {fileID: 7871463502075954296, guid: cc4ec3d4be2c0b84c9ca8132af8ccf20, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8850861118482109194, guid: cc4ec3d4be2c0b84c9ca8132af8ccf20, type: 3}
+      propertyPath: _speed
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8850861118482109194, guid: cc4ec3d4be2c0b84c9ca8132af8ccf20, type: 3}
       propertyPath: '_patrolPoints.Array.data[0]'
