@@ -6,9 +6,9 @@ TagManager:
   tags:
   - AudioManager
   - MusicManager
-  - slider_master
-  - slider_music
-  - slider_soundfx
+  - MasterVolume
+  - MusicVolume
+  - SoundFXVolume
   layers:
   - Default
   - TransparentFX
@@ -22,7 +22,6 @@ TagManager:
   - AstralPlayer
   - box
   - PhysicalWall
-  - 
   - 
   - 
   - 
