@@ -252,11 +252,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!4 &74074080 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5713156468731794276, guid: 3f32dcb3dc6d76d40a75c7b8ecd12536, type: 3}
-  m_PrefabInstance: {fileID: 1111646897}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &90265378
 GameObject:
   m_ObjectHideFlags: 0
@@ -661,25 +656,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!1 &429206773 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7851534575253521827, guid: 3f32dcb3dc6d76d40a75c7b8ecd12536, type: 3}
-  m_PrefabInstance: {fileID: 1111646897}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &429206778
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 429206773}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b0505f5dc7b75d43bb97a6d2724aee2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doorOpeningSpeed: 5
-  doorOpenLocation: {fileID: 74074080}
 --- !u!1 &510658739
 GameObject:
   m_ObjectHideFlags: 0
@@ -2451,16 +2427,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8842130926759584158, guid: 3f32dcb3dc6d76d40a75c7b8ecd12536, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7851534575253521827, guid: 3f32dcb3dc6d76d40a75c7b8ecd12536, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 6949779730183808592, guid: 3f32dcb3dc6d76d40a75c7b8ecd12536, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 429206778}
+      addedObject: {fileID: 2132565124}
   m_SourcePrefab: {fileID: 100100000, guid: 3f32dcb3dc6d76d40a75c7b8ecd12536, type: 3}
+--- !u!1 &1225038817 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1683836135642478294, guid: 3f32dcb3dc6d76d40a75c7b8ecd12536, type: 3}
+  m_PrefabInstance: {fileID: 1111646897}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1267503285
 GameObject:
   m_ObjectHideFlags: 0
@@ -3576,6 +3557,30 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &2132565122 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6949779730183808592, guid: 3f32dcb3dc6d76d40a75c7b8ecd12536, type: 3}
+  m_PrefabInstance: {fileID: 1111646897}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2132565124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2132565122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2565220592b33a74f8aca226c3f288ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dualButton: {fileID: 0}
+  switchColorContainers:
+  - activeGameObjects:
+    - {fileID: 1225038817}
+    SwitchColor: {r: 1, g: 1, b: 1, a: 1}
+  - activeGameObjects: []
+    SwitchColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
