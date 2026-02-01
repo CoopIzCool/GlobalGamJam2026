@@ -1682,6 +1682,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextLevelName: LVL_Box
+  levelEnteredClip: {fileID: 8300000, guid: 1cc4f528e1848c04f99606855841ec90, type: 3}
 --- !u!212 &1631425697
 SpriteRenderer:
   m_ObjectHideFlags: 0
