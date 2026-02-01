@@ -6,6 +6,7 @@ public class GameOverPanelHandler : MonoBehaviour
 {
     [SerializeField] private GameObject gameOverPanel;
     [SerializeField] private float bufferTimeBeforePanelAppears;
+    [SerializeField] private AudioClip AlertAudioClip;
     
     // Start is called before the first frame update
     IEnumerator Start()
@@ -22,6 +23,7 @@ public class GameOverPanelHandler : MonoBehaviour
 
     private void TriggerGameOver()
     {
+        SoundFXManager.instance.playSoundFxClip(AlertAudioClip, gameObject.transform, 0.75f);
         print("Entered");
         StartCoroutine(GameOverSequence());
     }

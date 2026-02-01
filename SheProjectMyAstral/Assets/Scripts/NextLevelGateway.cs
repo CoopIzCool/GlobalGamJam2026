@@ -6,6 +6,7 @@ public class NextLevelGateway : MonoBehaviour
 {
     #region Fields 
     [SerializeField] private string nextLevelName;
+    [SerializeField] private AudioClip levelEnteredClip;
     #endregion Fields
     // Start is called before the first frame update
     IEnumerator Start()
@@ -23,6 +24,7 @@ public class NextLevelGateway : MonoBehaviour
 
     private void GoToNextLevel()
     {
+        SoundFXManager.instance.playSoundFxClip(levelEnteredClip, gameObject.transform, 0.75f);
         BoilerPlate.Instance.GoToScene(nextLevelName,false);
     }
 
