@@ -117,11 +117,46 @@ public class VisionComponent : MonoBehaviour
         //Don't bother anymore math unless we are within range
         if (rangeCheck.Length > 0)
         {
-            Transform targetToAggress = rangeCheck[0].transform.root;
+            Transform targetToAggress;
+            
+            targetToAggress = rangeCheck[0].transform.root;
+            GameObject agressedObject  = targetToAggress.gameObject;
             Vector2 targetDirection = (targetToAggress.position - transform.position).normalized;
+            //To note I hate this -Ryan
+            Vector2 projectionTransformDirection = Vector2.zero;
+            Transform projectionTransform = null;
+
+            foreach (Collider2D collider in rangeCheck)
+            {
+                if (collider.gameObject.tag == "Pro")
+                {
+                    print("Theres a ghost!");
+                    projectionTransform = collider.gameObject.transform;
+                    projectionTransformDirection = (projectionTransform.position - transform.position).normalized;
+                }
+            }
+
+
+            //if (agressedObject.tag =="Player")
+            //{
+            //    GameObject projectionObject = GameObject.FindWithTag("Pro");
+
+                
+            //    if(projectionObject != null)
+            //    {
+            //        //OH MY GOD THIS SUCKS
+                    
+            //        projectionTransform = projectionObject.transform;
+            //        if(Vector2.Distance(projectionTransform.position,transform.position) < visionRadius)
+            //        projectionTransformDirection = (projectionTransform.position - transform.position).normalized;
+            //    }
+
+            //}
+            
             //Don't bother raycasting unless we are within vision cone. Since we are viewing from the center we want to see whats on both sides of the vision cone so we cut the intial angle in half
             if (Vector2.Angle(GetViewingDirection(), targetDirection) < visionAngle / 2.0f)
             {
+                
                 float targetDistance = Vector2.Distance(transform.position, targetToAggress.position);
                 if (!Physics2D.Raycast(transform.position, targetDirection, targetDistance, blockingLayer))
                 {
@@ -141,6 +176,25 @@ public class VisionComponent : MonoBehaviour
                 //PlayerOutOfSight(PlayerSpotted);
                 //return;
             }
+            else if(projectionTransformDirection != Vector2.zero && Vector2.Angle(GetViewingDirection(), projectionTransformDirection) < visionAngle / 2.0f)
+            {
+                float targetDistance = Vector2.Distance(transform.position, projectionTransform.position);
+                if (!Physics2D.Raycast(transform.position, projectionTransformDirection, targetDistance, blockingLayer))
+                {
+                    //If we get here the enemy has spotted something, lets get say we saw them, remember what they are and reset the pursuit timer
+                    PlayerSpotted = true;
+                    //if (currentVisionObjective == VisionState.Pursuit)
+                    //{
+                    //    ReleasePursuit();
+                    //}
+                    //rememberedTarget = targetToAggress.gameObject;
+                    //currentTimePursuiting = pursuitTimer;
+                    //currentVisionObjective = VisionState.Chase;
+                    PlayerSpottedEvent.Invoke();
+                    return;
+                }
+            }
+
             //PlayerOutOfSight(PlayerSpotted);
             //return;
         }
