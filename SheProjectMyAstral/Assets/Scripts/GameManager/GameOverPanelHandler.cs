@@ -23,7 +23,7 @@ public class GameOverPanelHandler : MonoBehaviour
 
     private void TriggerGameOver()
     {
-        SoundFXManager.instance.playSoundFxClip(AlertAudioClip, gameObject.transform, 0.5f);
+        SoundFXManager.instance.playSoundFxClip(AlertAudioClip, gameObject.transform, 0.75f);
         print("Entered");
         StartCoroutine(GameOverSequence());
     }
