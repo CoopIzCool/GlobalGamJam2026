@@ -40,6 +40,8 @@ public class MarioColorSwitchButton : BaseButtonScript
     protected override void ButtonPressed()
     {
         base.ButtonPressed();
+
+        
         //If we were to have some sort of fancy transition logic to make things cool and lerp like and
         //Turn previous on assets off
         for (int i = 0; i < switchColorContainers[_buttonActivatedIndex].activeGameObjects.Length; i++)
