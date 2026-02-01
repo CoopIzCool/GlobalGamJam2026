@@ -9,6 +9,8 @@ TagManager:
   - MasterVolume
   - MusicVolume
   - SoundFXVolume
+  - Projection
+  - Pro
   - slider_master
   - slider_music
   - Undefined
