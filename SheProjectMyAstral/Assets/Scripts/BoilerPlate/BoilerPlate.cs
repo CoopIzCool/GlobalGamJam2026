@@ -9,6 +9,8 @@ public class BoilerPlate : Singleton<BoilerPlate>
     private bool _GAME_IS_PAUSED = false;
     private float _FORMER_TIME_SCALE;
     [SerializeField] private AudioClip click;
+    [SerializeField] private Canvas transition;
+    private float transitionTime = 0.5f;
     
     public void GoToScene(string SceneName)
     {
@@ -18,11 +20,17 @@ public class BoilerPlate : Singleton<BoilerPlate>
         //SoundFXManager.instance.playSoundFxClip(click, transform, 1f);
         //}
         print("Going to " + SceneName);
-        SceneManager.LoadScene(SceneName);
+        StartCoroutine(LoadScene(SceneName));
         _GAME_IS_PAUSED = false;
         Time.timeScale = 1.0f;
     }
-
+    
+    IEnumerator LoadScene(string SceneName)
+    {
+        transition.GetComponent<Animator>().SetTrigger("Start");
+        yield return new WaitForSeconds(transitionTime);
+        SceneManager.LoadScene(SceneName);
+    }
     public void RestartScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
