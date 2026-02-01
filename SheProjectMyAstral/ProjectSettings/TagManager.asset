@@ -9,6 +9,11 @@ TagManager:
   - MasterVolume
   - MusicVolume
   - SoundFXVolume
+  - slider_master
+  - slider_music
+  - Undefined
+  - PauseButton
+  - ResumeButton
   layers:
   - Default
   - TransparentFX
