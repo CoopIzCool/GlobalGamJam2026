@@ -16,6 +16,11 @@ public class BoilerPlate : Singleton<BoilerPlate>
         SceneManager.LoadScene(SceneName);
     }
 
+    public void RestartScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
     public void QuitGame()
     {
         SoundFXManager.instance.playSoundFxClip(click, transform, 1f);

@@ -75,10 +75,10 @@ public class GameManager : Singleton<GameManager>
         {
             Debug.Log("OtherMenu detected!");
         }
-        if (stateDictionary["GameOver"] != null)
-        {
-            Debug.Log("Game Over detected!");
-        }
+        //if (stateDictionary["GameOver"] != null)
+        //{
+        //    Debug.Log("Game Over detected!");
+        //}
 
         Debug.Log("Current state is: " + currentState.Name);
 
@@ -114,6 +114,8 @@ public class GameManager : Singleton<GameManager>
             Debug.LogError($"{StateName} is the same as the current state, Transition failed!");
             return;
         }
+
+        print($"{StateName} state entered");
 
         currentState.OnExit();
         currentState = nextState;
