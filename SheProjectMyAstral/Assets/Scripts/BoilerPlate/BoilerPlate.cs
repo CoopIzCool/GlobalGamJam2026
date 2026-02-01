@@ -8,15 +8,18 @@ public class BoilerPlate : Singleton<BoilerPlate>
 {
     private bool _GAME_IS_PAUSED = false;
     private float _FORMER_TIME_SCALE;
+    [SerializeField] private AudioClip click;
     
     public void GoToScene(string SceneName)
     {
+        SoundFXManager.instance.playSoundFxClip(click, transform, 1f);
         SceneManager.LoadScene(SceneName);
     }
 
     public void QuitGame()
     {
-        Application.Quit();
+        SoundFXManager.instance.playSoundFxClip(click, transform, 1f);
+        StartCoroutine(QuitTimer());
         print("If you are seeing this the game should end right now.");
         //Hey future Ryan, if this breaks the build you are an unloveable chud and you should comment the line out below. 
 #if UNITY_EDITOR
@@ -24,9 +27,16 @@ public class BoilerPlate : Singleton<BoilerPlate>
 #endif
     }
 
+    IEnumerator QuitTimer()
+    {
+        yield return new WaitForSeconds(click.length);
+        Application.Quit();
+    }
+
     public void PauseGame()
     {
-        if(_GAME_IS_PAUSED)
+        SoundFXManager.instance.playSoundFxClip(click, transform, 1f);
+        if (_GAME_IS_PAUSED)
         {
             return;
         }
@@ -39,7 +49,8 @@ public class BoilerPlate : Singleton<BoilerPlate>
 
     public void ResumeGame()
     {
-        if(!_GAME_IS_PAUSED)
+        SoundFXManager.instance.playSoundFxClip(click, transform, 1f);
+        if (!_GAME_IS_PAUSED)
         {
             return;
         }
@@ -49,6 +60,7 @@ public class BoilerPlate : Singleton<BoilerPlate>
 
     public void ResumePreviousGameSpeed()
     {
+        SoundFXManager.instance.playSoundFxClip(click, transform, 1f);
         if (!_GAME_IS_PAUSED)
         {
             return;
@@ -59,9 +71,10 @@ public class BoilerPlate : Singleton<BoilerPlate>
 
     public void TogglePause()
     {
+        SoundFXManager.instance.playSoundFxClip(click, transform, 1f);
         //_GAME_IS_PAUSED ? ResumeGame() : ResumePreviousGameSpeed();
-        
-        if(_GAME_IS_PAUSED)
+
+        if (_GAME_IS_PAUSED)
         {
             ResumeGame();
         }
