@@ -30,7 +30,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 6670661862912025863}
   m_Father: {fileID: 6056596353111046756}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1156373663224326293
@@ -159,6 +160,7 @@ MonoBehaviour:
   animator: {fileID: 6740018630185932249}
   sr: {fileID: 1156373663224326293}
   patrollingComponent: {fileID: 2067450459363816677}
+  gb: {fileID: 0}
   animationHolder: {fileID: 4254328894378584916}
   enemy: {fileID: 7425550092021312316}
 --- !u!1 &5043673325836845166
@@ -186,12 +188,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5043673325836845166}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -1, w: 0}
-  m_LocalPosition: {x: 0, y: -1, z: -0.025943542}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: -0.025943542}
   m_LocalScale: {x: 4, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 8465987454556915079}
+  m_Father: {fileID: 1009327692058963541}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7626061209462607219
 SpriteRenderer:
@@ -406,6 +408,10 @@ PrefabInstance:
       propertyPath: alertIndicator
       value: 
       objectReference: {fileID: 5043673325836845166}
+    - target: {fileID: 3625570064769333387, guid: 91a67a6ccadccdd48927562627c043c7, type: 3}
+      propertyPath: guardAnimation
+      value: 
+      objectReference: {fileID: 692083539870484860}
     - target: {fileID: 4010274045525928432, guid: 91a67a6ccadccdd48927562627c043c7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.68
@@ -476,10 +482,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 4010274045525928432, guid: 91a67a6ccadccdd48927562627c043c7, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 6670661862912025863}
+    m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2726571358573119307, guid: 91a67a6ccadccdd48927562627c043c7, type: 3}
       insertIndex: -1

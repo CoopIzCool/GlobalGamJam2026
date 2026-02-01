@@ -10,6 +10,8 @@ public class BoilerPlate : Singleton<BoilerPlate>
     private bool _GAME_IS_PAUSED = false;
     private float _FORMER_TIME_SCALE;
     [SerializeField] private AudioClip click;
+    [SerializeField] private Canvas transition;
+    private float transitionTime = 0.5f;
     
     public void GoToScene(string SceneName)
     {
@@ -19,11 +21,28 @@ public class BoilerPlate : Singleton<BoilerPlate>
         //SoundFXManager.instance.playSoundFxClip(click, transform, 1f);
         //}
         print("Going to " + SceneName);
-        SceneManager.LoadScene(SceneName);
+
+        // skip transition if it is not set
+        // ! ALL instances need a reference to a transition !
+        // It will skip it if even 1 doesn't have it, and each level tends to have, like, 3 of them.
+        if (transition != null)
+        {
+            StartCoroutine(LoadScene(SceneName));
+        }
+        else
+        {
+            SceneManager.LoadScene(SceneName);
+        }
         _GAME_IS_PAUSED = false;
         Time.timeScale = 1.0f;
     }
-
+    
+    IEnumerator LoadScene(string SceneName)
+    {
+        transition.GetComponent<Animator>().SetTrigger("Start");
+        yield return new WaitForSeconds(transitionTime);
+        SceneManager.LoadScene(SceneName);
+    }
     public void RestartScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);

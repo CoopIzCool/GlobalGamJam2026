@@ -34,5 +34,12 @@ public class GuardAnimation : MonoBehaviour
 
         //If the rotation of the enemy is below 180, keep rotation the same, otherwise flip it.
         sr.flipX = enemy.transform.rotation.eulerAngles.z > 180;
+
+
+    }
+
+    public void SetAnimation(string animationName)
+    {
+        animator.SetTrigger(animationName);
     }
 }

@@ -213,6 +213,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dualButton: {fileID: 0}
+  defaultSprite: {fileID: -4651692013538541605, guid: 4a29ccf2ba758be4c8465574a0704135, type: 3}
+  pressedSprite: {fileID: 4865993689972740046, guid: 58360746cfd833449a351f722c6961e8, type: 3}
   doorAnswer: {fileID: 8842130926759584158}
 --- !u!1 &7851534575253521827
 GameObject:
@@ -291,7 +293,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: -771035452, guid: fea52719318262f4a9429166b1ce8053, type: 3}
   m_Color: {r: 0.3207547, g: 0.3207547, b: 0.3207547, a: 1}
   m_FlipX: 0
   m_FlipY: 0
