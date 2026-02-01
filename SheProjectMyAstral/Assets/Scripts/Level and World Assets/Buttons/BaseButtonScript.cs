@@ -5,6 +5,7 @@ using UnityEngine;
 public abstract class BaseButtonScript : MonoBehaviour, I_InteractableObject
 {
     protected bool _buttonPressed = false;
+    [SerializeField] private DualButtonPlacement dualButton;
     protected virtual void ButtonPressed()
     {
         if (!_buttonPressed && DualButtonPressed()) 
