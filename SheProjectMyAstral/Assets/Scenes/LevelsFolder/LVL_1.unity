@@ -319,7 +319,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 491662900535359177, guid: 8265ee00abc889742ad52cfea297454e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 8265ee00abc889742ad52cfea297454e, type: 3}
 --- !u!1 &210688288
 GameObject:
@@ -12450,6 +12453,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2141362260347583075, guid: 3c26869c069ddef4d9da30e5aeb6ad11, type: 3}
+      propertyPath: m_TagString
+      value: PauseCanvas
+      objectReference: {fileID: 0}
     - target: {fileID: 6899010626753901614, guid: 3c26869c069ddef4d9da30e5aeb6ad11, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -12490,11 +12497,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7099318869457377638, guid: 3c26869c069ddef4d9da30e5aeb6ad11, type: 3}
+      propertyPath: pauseCanvas
+      value: 
+      objectReference: {fileID: 1237819584}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c26869c069ddef4d9da30e5aeb6ad11, type: 3}
+--- !u!223 &1237819584 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 8119845724612763047, guid: 3c26869c069ddef4d9da30e5aeb6ad11, type: 3}
+  m_PrefabInstance: {fileID: 1237819583}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1374311737
 GameObject:
   m_ObjectHideFlags: 0
@@ -14459,7 +14475,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1878572821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14849,10 +14865,50 @@ PrefabInstance:
       propertyPath: m_Name
       value: SuperManager
       objectReference: {fileID: 0}
+    - target: {fileID: 5677807240376917675, guid: 8f8234d063f1a6b42860fe30196ce8d0, type: 3}
+      propertyPath: m_TagString
+      value: ResumeButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 6831337249082196623, guid: 8f8234d063f1a6b42860fe30196ce8d0, type: 3}
+      propertyPath: m_TagString
+      value: PausePanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 7011528537495912129, guid: 8f8234d063f1a6b42860fe30196ce8d0, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7011528537495912129, guid: 8f8234d063f1a6b42860fe30196ce8d0, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7011528537495912129, guid: 8f8234d063f1a6b42860fe30196ce8d0, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7011528537495912129, guid: 8f8234d063f1a6b42860fe30196ce8d0, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7011528537495912129, guid: 8f8234d063f1a6b42860fe30196ce8d0, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7011528537495912129, guid: 8f8234d063f1a6b42860fe30196ce8d0, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -50
+      objectReference: {fileID: 0}
     - target: {fileID: 7037954431976850908, guid: 8f8234d063f1a6b42860fe30196ce8d0, type: 3}
       propertyPath: AlertAudioClip
       value: 
       objectReference: {fileID: 8300000, guid: b894f3e0a835b7542b6c9e3308d61d7d, type: 3}
+    - target: {fileID: 7053144094086820178, guid: 8f8234d063f1a6b42860fe30196ce8d0, type: 3}
+      propertyPath: m_TagString
+      value: PauseButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 7544459362881587979, guid: 8f8234d063f1a6b42860fe30196ce8d0, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 8255330895545197484, guid: 8f8234d063f1a6b42860fe30196ce8d0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.5929704

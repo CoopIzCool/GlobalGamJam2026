@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class BoilerPlate : Singleton<BoilerPlate>
 {
@@ -93,6 +94,25 @@ public class BoilerPlate : Singleton<BoilerPlate>
         else
         {
             PauseGame();
+        }
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            GameObject[] pb = GameObject.FindGameObjectsWithTag("PauseButton");
+            GameObject[] rb = GameObject.FindGameObjectsWithTag("ResumeButton");
+            Debug.Log("PB:" + pb.Length + ", RB:" + rb.Length);
+             if (rb.Length > 0)
+            {
+                rb[0].gameObject.GetComponent<Button>().onClick.Invoke();
+            }
+            else if (pb.Length > 0)
+            {
+                pb[0].gameObject.GetComponent<Button>().onClick.Invoke();
+            }
+            
         }
     }
 }

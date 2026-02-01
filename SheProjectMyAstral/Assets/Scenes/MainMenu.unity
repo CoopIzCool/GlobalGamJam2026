@@ -202,7 +202,7 @@ GameObject:
   - component: {fileID: 52687569}
   m_Layer: 5
   m_Name: BTN_Settings
-  m_TagString: Untagged
+  m_TagString: PauseButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1563,7 +1563,7 @@ GameObject:
   - component: {fileID: 864479362}
   m_Layer: 5
   m_Name: BTN_Back
-  m_TagString: Untagged
+  m_TagString: ResumeButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
