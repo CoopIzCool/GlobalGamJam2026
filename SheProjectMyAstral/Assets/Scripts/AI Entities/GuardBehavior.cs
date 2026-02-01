@@ -7,6 +7,7 @@ public class GuardBehavior : MonoBehaviour
     #region Fields
     private VisionComponent _visionComponent;
     private bool gameOverCalled = false;
+    [SerializeField] private GameObject alertIndicator; 
     #endregion Fields
 
     // Start is called before the first frame update
@@ -28,6 +29,14 @@ public class GuardBehavior : MonoBehaviour
         if(gameOverCalled) return;
         //Add game over or whatever logic here.
         Debug.Log("Player Spotted");
+        CameraBehavior camera = FindFirstObjectByType<CameraBehavior>();
+        if (camera != null)
+        {
+            camera.player = gameObject.transform;
+            camera.followSpeed = 0.05f;
+        }
+
+        alertIndicator.SetActive(true);
         GameManager.Instance.TransitionTo("GameOver");
         gameOverCalled = true;
     }
