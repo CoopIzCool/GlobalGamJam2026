@@ -20880,7 +20880,7 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 248fb16dc57420d4ea4b17c659863f50, type: 2}
   - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: 4a055a6054657cf4ab57f9a2ca963bff, type: 2}
+    m_Data: {fileID: 11400000, guid: 0ae10f75ebc935d4dbbf719299de3719, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 0be977d9c4e8bc44b9696325045587bf, type: 2}
   - m_RefCount: 1
@@ -20927,7 +20927,7 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: 934620675, guid: e5b3f31f2edc22b429aecf9a8fe7c340, type: 3}
   - m_RefCount: 1
-    m_Data: {fileID: 1016112751343034435, guid: 9d48afb3bef81d443b898da7c970e225, type: 3}
+    m_Data: {fileID: -1667291908, guid: ec109dbd5afe73d4fbb6f2cb441563d4, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: -4479398194301815980, guid: e13152af7a1b09c45916124cc50ac72c, type: 3}
   - m_RefCount: 1
@@ -21265,6 +21265,10 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2921740744513411645, guid: dd69df4f26e32984383fa49e5717d4a8, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1263151149, guid: fea52719318262f4a9429166b1ce8053, type: 3}
+    - target: {fileID: 2921740744513411645, guid: dd69df4f26e32984383fa49e5717d4a8, type: 3}
       propertyPath: m_Color.b
       value: 1
       objectReference: {fileID: 0}
@@ -21282,11 +21286,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3329042003889604808, guid: dd69df4f26e32984383fa49e5717d4a8, type: 3}
       propertyPath: switchColorContainers.Array.data[0].SwitchColor.b
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3329042003889604808, guid: dd69df4f26e32984383fa49e5717d4a8, type: 3}
       propertyPath: switchColorContainers.Array.data[0].SwitchColor.g
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3329042003889604808, guid: dd69df4f26e32984383fa49e5717d4a8, type: 3}
       propertyPath: switchColorContainers.Array.data[0].SwitchColor.r
@@ -21298,11 +21302,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3329042003889604808, guid: dd69df4f26e32984383fa49e5717d4a8, type: 3}
       propertyPath: switchColorContainers.Array.data[1].SwitchColor.g
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3329042003889604808, guid: dd69df4f26e32984383fa49e5717d4a8, type: 3}
       propertyPath: switchColorContainers.Array.data[1].SwitchColor.r
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3329042003889604808, guid: dd69df4f26e32984383fa49e5717d4a8, type: 3}
       propertyPath: switchColorContainers.Array.data[2].SwitchColor.a
@@ -22010,6 +22014,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2921740744513411645, guid: dd69df4f26e32984383fa49e5717d4a8, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1263151149, guid: fea52719318262f4a9429166b1ce8053, type: 3}
+    - target: {fileID: 2921740744513411645, guid: dd69df4f26e32984383fa49e5717d4a8, type: 3}
       propertyPath: m_Color.b
       value: 1
       objectReference: {fileID: 0}
@@ -22031,11 +22039,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3329042003889604808, guid: dd69df4f26e32984383fa49e5717d4a8, type: 3}
       propertyPath: switchColorContainers.Array.data[0].SwitchColor.g
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3329042003889604808, guid: dd69df4f26e32984383fa49e5717d4a8, type: 3}
       propertyPath: switchColorContainers.Array.data[0].SwitchColor.r
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3329042003889604808, guid: dd69df4f26e32984383fa49e5717d4a8, type: 3}
       propertyPath: switchColorContainers.Array.data[1].SwitchColor.b
