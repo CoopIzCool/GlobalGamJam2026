@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
     [SerializeField] private SpriteRenderer playerSprite;
     [SerializeField] private SpriteRenderer projectionSprite;
     [SerializeField] private SpriteRenderer inverterSprite;
+    [SerializeField] private GameObject spriteObj;
 
     // internal fields (things like these should only be for completing stuff within player)
     private Vector2 movementDirection;
@@ -41,6 +42,14 @@ public class Player : MonoBehaviour
     public void OnMove(InputAction.CallbackContext context)
     {
         movementDirection = context.ReadValue<Vector2>();
+        if (context.canceled)
+        {
+            spriteObj.GetComponent<Animator>().SetBool("isMoving", false);
+        }
+        else
+        {
+            spriteObj.GetComponent<Animator>().SetBool("isMoving", true);
+        }
     }
     /// <summary>
     /// Gets the key to toggle projection.
@@ -68,6 +77,13 @@ public class Player : MonoBehaviour
     }
     private void Move()
     {
+        // flip the sprite if the player is going left
+        if (movementDirection.x != 0)
+        spriteObj.GetComponent<SpriteRenderer>().flipX = movementDirection.x < 0;
+
+        projectionSprite.flipX = spriteObj.GetComponent<SpriteRenderer>().flipX;
+        inverterSprite.flipX = spriteObj.GetComponent<SpriteRenderer>().flipX;
+
         // player movement
         if (!isProjecting)
         {

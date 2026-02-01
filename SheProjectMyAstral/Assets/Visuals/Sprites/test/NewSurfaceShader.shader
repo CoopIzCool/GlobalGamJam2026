@@ -1,23 +1,28 @@
 Shader "Custom/NewSurfaceShader"
 {
-    Properties 
+    // Google's AI created this hlsl for me.
+    // I feel embarrassed.
+    // This is a warning that this code is NOT mine.
+    // I unfortunately had to throw in the towel on this.
+    // Sadge. :<
+    // - Dave
+    Properties
     {
-        _Color ("Color", Color) = (1,1,1,1)
-        _MainTex ("Albedo (RGB)", 2D) = "white" {}
+        _MainTex ("Texture", 2D) = "white" {}
+        _Color ("Tint", Color) = (1,1,1,1)
     }
-    SubShader 
+    SubShader
     {
         Tags { "RenderType"="Transparent" "Queue"="Transparent" }
-        LOD 200
-        Blend OneMinusDstColor Zero
-
-        PASS
+        Blend SrcAlpha OneMinusSrcAlpha // Standard transparency blending
+        Cull off // I did add this line myself though, now I feel like a jenius
+        Pass
         {
             CGPROGRAM
-
             #pragma vertex vert
             #pragma fragment frag
-            #pragma target 3.0 Alpha:Blend
+            // make fog work
+            #include "UnityCG.cginc"
 
             struct appdata
             {
@@ -31,23 +36,28 @@ Shader "Custom/NewSurfaceShader"
                 float4 vertex : SV_POSITION;
             };
 
-            fixed4 _Color;
+            sampler2D _MainTex;
+            float4 _Color;
 
             v2f vert (appdata v)
             {
                 v2f o;
                 o.vertex = UnityObjectToClipPos(v.vertex);
-                o.uv = float2(0,0);
+                o.uv = v.uv;
                 return o;
             }
-        
+
             fixed4 frag (v2f i) : SV_Target
             {
-                return _Color;
-            }
+                // Sample the texture color
+                fixed4 col = tex2D(_MainTex, i.uv) * _Color;
 
+                // Invert the RGB channels, keeping the original alpha
+                col.rgb = 1.0 - col.rgb;
+                
+                return col;
+            }
             ENDCG
         }
     }
-    FallBack "Diffuse"
 }
