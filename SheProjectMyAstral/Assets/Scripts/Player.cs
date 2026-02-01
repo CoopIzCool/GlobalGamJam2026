@@ -7,11 +7,18 @@ public class Player : MonoBehaviour
 {
     // fields
     [SerializeField] private float playerSpeed = 2;
+    [SerializeField] private float projectionDistance = 5;
     [SerializeField] private Rigidbody2D rigidBody;
     [SerializeField] private GameObject projection;
+    [SerializeField] private GameObject projectionRadius;
+    [SerializeField] private float projectionTimeLength;
+    [SerializeField] private Canvas HUD;
+    [SerializeField] private SpriteRenderer playerSprite;
+    [SerializeField] private SpriteRenderer projectionSprite;
 
     // internal fields (things like these should only be for completing stuff within player)
     private Vector2 movementDirection;
+    private float projectionTimer;
     private bool isProjecting = false; // should be replaced once there's a gamestate for it
 
     // Start is called before the first frame update
@@ -23,6 +30,8 @@ public class Player : MonoBehaviour
     private void FixedUpdate()
     {
         Move();
+        CheckProjection();
+        UpdateExternal();
     }
     /// <summary>
     /// Gets the direction of context to use in Move and other functions.
@@ -32,25 +41,33 @@ public class Player : MonoBehaviour
     {
         movementDirection = context.ReadValue<Vector2>();
     }
-
+    /// <summary>
+    /// Gets the key to toggle projection.
+    /// </summary>
+    /// <param name="context">button input</param>
     public void OnProject(InputAction.CallbackContext context)
     {
-        // toggle projection
-        if (isProjecting)
-        {
-            isProjecting = false;
-            projection.SetActive(false);
-        }
-        else
-        {
-            isProjecting = true;
-            projection.SetActive(true);
-        }
+        SetProjection();
     }
 
     /// <summary>
     /// Moves the player and projection around.
     /// </summary>
+    private void UpdateExternal()
+    {
+        if (HUD != null)
+        {
+            HUD.GetComponent<HUD>().SetProjectionTimer(projectionTimer, projectionTimeLength);
+        }
+        if (projectionSprite != null)
+        {
+            // invert the player sprite and put it on the projection
+            SpriteRenderer invertedSprite = projectionSprite;
+            invertedSprite.sprite = playerSprite.sprite;
+            invertedSprite.color = new Color(1 - playerSprite.color.r,1 - playerSprite.color.g, 1 - playerSprite.color.b);
+            projectionSprite.sprite = invertedSprite.sprite;
+        }
+    }
     private void Move()
     {
         // player movement
@@ -65,11 +82,63 @@ public class Player : MonoBehaviour
         // projection movement
         else
         {
-            // grab the rigidbody to make the code cleaner
+            // rename some variables to make the code cleaner
             Rigidbody2D projectionBody = projection.GetComponent<Rigidbody2D>();
+            Vector2 playerPosition = (Vector2)transform.position;
+            Vector2 projectionPosition = (Vector2)projection.transform.position;
 
-            // Move the projection by its rigidbody from its previous position.
-            projectionBody.MovePosition((Vector2)projection.transform.position + ((movementDirection * playerSpeed) * Time.fixedDeltaTime));
+            // Move the projection by its rigidbody from its previous position, clamped by projectionDistance
+            projectionBody.MovePosition(playerPosition +    
+                Vector2.ClampMagnitude((projectionPosition - playerPosition) + ((movementDirection * playerSpeed) * Time.fixedDeltaTime), 
+                projectionDistance));
+
+            // move the projection radius and resize it accordingly
+            projectionRadius.transform.position = transform.position;
+            projectionRadius.transform.localScale = new Vector3(projectionDistance * 2, projectionDistance * 2, 1);
         }
     }
+    /// <summary>
+    /// Manage anything that solely the projection relies on per-frame.
+    /// </summary>
+    private void CheckProjection()
+    {
+        // only do something if projecting
+        if (isProjecting)
+        {
+            projectionTimer += Time.fixedDeltaTime;
+            // Debug.Log(projectionTimer);
+            // forcefully stop projecting after projectionTimeLength seconds
+            if (projectionTimer >= projectionTimeLength)
+            {
+                SetProjection();
+            }
+        }
+    }
+    /// <summary>
+    /// Sets the projection, and changes anything that goes with it.
+    /// </summary>
+    private void SetProjection()
+    {
+        // toggle projection
+        if (isProjecting)
+        {
+            isProjecting = false;
+            projection.SetActive(false);
+            projectionRadius.SetActive(false);
+            projectionTimer = 0;
+        }
+        else
+        {
+            isProjecting = true;
+            projectionRadius.SetActive(true);
+            projection.SetActive(true);
+        }
+    }
+    #region Gizmos
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.white;
+        Gizmos.DrawWireSphere(transform.position, projectionDistance);
+    }
+    #endregion
 }

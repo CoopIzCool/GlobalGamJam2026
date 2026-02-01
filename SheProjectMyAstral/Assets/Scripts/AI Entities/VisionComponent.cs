@@ -59,6 +59,26 @@ public class VisionComponent : MonoBehaviour
     #endregion Object Permanence
 
     #endregion
+
+    #region Properties
+    //I'll add setters later if needed
+    public float FOV
+    {
+        get { return visionAngle; }
+    }
+
+    public float VisionRadius
+    {
+        get { return visionRadius; }
+    }
+
+    public LayerMask CollisionLayerMask
+    {
+        get { return playerLayer | blockingLayer; }
+    }
+    #endregion
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -256,7 +276,7 @@ public class VisionComponent : MonoBehaviour
         return new Vector2(Mathf.Sin(angleBounds * Mathf.Deg2Rad), Mathf.Cos(angleBounds * Mathf.Deg2Rad));
     }
 
-    private float GetStartingAngleInEuler()
+    public float GetStartingAngleInEuler()
     {
         switch (direction)
         {

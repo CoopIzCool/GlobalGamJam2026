@@ -9,23 +9,42 @@ using UnityEngine;
 /// 
 public class GameManager : Singleton<GameManager>
 {
+    #region States:
+    //State Fields:
+    [SerializeField] private MainMenu MENU_STATE;
+    [SerializeField] private MainMenu OTHER_MENU_TEST_STATE;
+
+    /// <summary>
+    /// Sets up the dictionary to be ready to find relevant states. 
+    /// Above states **MUST BE ADDED HERE** in order to be searched for and transitioned to later!
+    /// </summary>
+    private void SetupDictionary()
+    {
+        stateDictionary.Add("MainMenu", MENU_STATE);
+        stateDictionary.Add("OtherMenu", OTHER_MENU_TEST_STATE);
+    }
+    #endregion
 
     [SerializeField] private GameState currentState;                        //State of the game we are currently in.
-    [SerializeField] public Dictionary<string, GameState> stateDictionary;  //All possible states are stored in here.
+    [SerializeField] public Dictionary<string, GameState> stateDictionary;  //All possible states are stored in here after Awake().
+
+    public GameState CurrentState { get { return currentState; } }          //Returns the currentState
+    
 
     /// <summary>
     /// Sets up the state dictionary to be usable, if current state is not set beforehand we give it a default state of "main".
     /// </summary>
     private void Awake()
     {
-        if (stateDictionary != null)
+        if (stateDictionary == null)
         {
             stateDictionary = new Dictionary<string, GameState>();
+            SetupDictionary();
         }
 
         if (currentState == null && stateDictionary != null)
         {
-            currentState = stateDictionary["Main"];
+            currentState = stateDictionary["MainMenu"];
         }
         else if (currentState == null)
         {
@@ -33,14 +52,53 @@ public class GameManager : Singleton<GameManager>
         }
     }
 
+    private void Start()
+    {
+        //TESTING BELOW:
+
+        if (stateDictionary["MainMenu"] != null)
+        {
+            Debug.Log("MainMenu detected!");
+        }
+        if (stateDictionary["OtherMenu"] != null)
+        {
+            Debug.Log("OtherMenu detected!");
+        }
+
+        Debug.Log("Current state is: " + currentState.Name);
+
+        Debug.Log("Transition from current to 'OtherMenu'.");
+        TransitionTo("OtherMenu");
+
+        Debug.Log("Transition from current to 'OtherMenu' again...");
+        TransitionTo("OtherMenu");
+
+        Debug.Log("Transition from current to 'MainMenu'.");
+        TransitionTo("MainMenu");
+
+        Debug.Log("Transition from current to 'MadeUpFakeState'");
+        TransitionTo("MadeUpFakeState");
+    }
+
     /// <summary>
     /// Calls necessary closing and opening methods for switching between states, 
     /// string parameter represents the name assigned to the state in the above dictionary.
+    /// Most likely, is called by the states themselves but could be called through other things as well.
     /// </summary>
     /// <param name="StateName"></param>
     public void TransitionTo(string StateName)
     {
-        GameState nextState = stateDictionary[StateName];
+        GameState nextState;
+        if ( (nextState = stateDictionary[StateName]) == null)
+        {
+            Debug.LogError($"{StateName} is not a valid state, Transition failed!");
+            return;
+        }
+        else if (nextState == currentState)
+        {
+            Debug.LogError($"{StateName} is the same as the current state, Transition failed!");
+            return;
+        }
 
         currentState.OnExit();
         currentState = nextState;

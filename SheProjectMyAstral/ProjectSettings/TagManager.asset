@@ -17,10 +17,11 @@ TagManager:
   - Water
   - UI
   - PhysicalPlayer
-  - 
-  - 
-  - 
-  - 
+  - PlayerWall
+  - AstralWall
+  - AstralPlayer
+  - box
+  - PhysicalWall
   - 
   - 
   - 

@@ -8,7 +8,7 @@ public class DoorOpeningButton : BaseButtonScript
     [SerializeField] private DoorObject doorAnswer;
     #endregion 
 
-    public override void ButtonPressed()
+    protected override void ButtonPressed()
     {
         base.ButtonPressed();
         //Add door open command
