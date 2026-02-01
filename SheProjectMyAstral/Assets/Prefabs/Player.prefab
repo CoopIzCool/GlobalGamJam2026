@@ -747,6 +747,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9146242875450744090, guid: 198420578e1dd624abe7a7a2f536f8bf, type: 3}
+      propertyPath: m_TagString
+      value: Pro
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
