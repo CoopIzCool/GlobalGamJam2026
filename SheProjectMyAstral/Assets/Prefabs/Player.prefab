@@ -204,6 +204,9 @@ MonoBehaviour:
   projection: {fileID: 4183040367945290189}
   projectionRadius: {fileID: 7202150573479220152}
   projectionTimeLength: 10
+  HUD: {fileID: 0}
+  playerSprite: {fileID: 6640724944680572061}
+  projectionSprite: {fileID: 334113770828847537}
 --- !u!50 &81960202200308833
 Rigidbody2D:
   serializedVersion: 4
@@ -468,6 +471,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 198420578e1dd624abe7a7a2f536f8bf, type: 3}
+--- !u!212 &334113770828847537 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 4630787656368657766, guid: 198420578e1dd624abe7a7a2f536f8bf, type: 3}
+  m_PrefabInstance: {fileID: 4963211306024815831}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &4183040367945290189 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9146242875450744090, guid: 198420578e1dd624abe7a7a2f536f8bf, type: 3}

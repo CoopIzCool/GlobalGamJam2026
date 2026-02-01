@@ -7,7 +7,7 @@ public abstract class BaseButtonScript : MonoBehaviour, I_InteractableObject
     protected bool _buttonPressed = false;
     protected virtual void ButtonPressed()
     {
-        if(!_buttonPressed) 
+        if (!_buttonPressed && DualButtonPressed()) 
         {
             _buttonPressed = true;
             Debug.Log("Button Pressed");
@@ -23,6 +23,15 @@ public abstract class BaseButtonScript : MonoBehaviour, I_InteractableObject
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Interact();
+    }
+
+    protected bool DualButtonPressed()
+    {
+        if(!dualButton)
+        {
+            return true;
+        }
+        return dualButton.ButtonPressed;
     }
 
 }
