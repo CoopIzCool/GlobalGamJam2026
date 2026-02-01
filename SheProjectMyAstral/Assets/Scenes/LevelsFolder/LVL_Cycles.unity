@@ -1515,6 +1515,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2565220592b33a74f8aca226c3f288ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dualButton: {fileID: 0}
   switchColorContainers:
   - activeGameObjects:
     - {fileID: 93132989}

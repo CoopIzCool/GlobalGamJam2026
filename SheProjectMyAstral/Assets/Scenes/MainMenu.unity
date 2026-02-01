@@ -330,6 +330,42 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1815910029}
+        m_TargetAssemblyTypeName: SliderStabllizer, Assembly-CSharp
+        m_MethodName: loadVolumes
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 573979408}
+        m_TargetAssemblyTypeName: SliderStabllizer, Assembly-CSharp
+        m_MethodName: loadVolumes
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1976766206}
+        m_TargetAssemblyTypeName: SliderStabllizer, Assembly-CSharp
+        m_MethodName: loadVolumes
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &52687567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1013,9 +1049,10 @@ GameObject:
   m_Component:
   - component: {fileID: 573979406}
   - component: {fileID: 573979407}
+  - component: {fileID: 573979408}
   m_Layer: 5
   m_Name: Slider_Music
-  m_TagString: Untagged
+  m_TagString: MusicVolume
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1106,6 +1143,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &573979408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 573979405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2266ac8747ae6904cbf256aa3778e481, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioMixer: {fileID: 24100000, guid: d78fa27a7ef7b184488f43fdbb26e59b, type: 2}
 --- !u!114 &575990488 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7064492322522968047, guid: 0b82a6c878dbf6944ad6d27d541362b4, type: 3}
@@ -2601,9 +2651,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1815910027}
   - component: {fileID: 1815910028}
+  - component: {fileID: 1815910029}
   m_Layer: 5
   m_Name: Slider_Master
-  m_TagString: Untagged
+  m_TagString: MasterVolume
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2694,6 +2745,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1815910029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1815910026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2266ac8747ae6904cbf256aa3778e481, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioMixer: {fileID: 24100000, guid: d78fa27a7ef7b184488f43fdbb26e59b, type: 2}
 --- !u!1 &1862268541
 GameObject:
   m_ObjectHideFlags: 0
@@ -2836,9 +2900,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1976766204}
   - component: {fileID: 1976766205}
+  - component: {fileID: 1976766206}
   m_Layer: 5
   m_Name: Slider_SoundFX
-  m_TagString: Untagged
+  m_TagString: SoundFXVolume
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2929,6 +2994,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1976766206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1976766203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2266ac8747ae6904cbf256aa3778e481, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioMixer: {fileID: 24100000, guid: d78fa27a7ef7b184488f43fdbb26e59b, type: 2}
 --- !u!1 &2031802089
 GameObject:
   m_ObjectHideFlags: 0
