@@ -14,6 +14,8 @@ public class BoilerPlate : Singleton<BoilerPlate>
     {
         SoundFXManager.instance.playSoundFxClip(click, transform, 1f);
         SceneManager.LoadScene(SceneName);
+        _GAME_IS_PAUSED = false;
+        Time.timeScale = 1.0f;
     }
 
     public void RestartScene()
