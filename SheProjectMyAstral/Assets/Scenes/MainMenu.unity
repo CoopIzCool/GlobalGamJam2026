@@ -199,6 +199,7 @@ GameObject:
   - component: {fileID: 52687568}
   - component: {fileID: 52687567}
   - component: {fileID: 52687566}
+  - component: {fileID: 52687569}
   m_Layer: 5
   m_Name: BTN_Settings
   m_TagString: Untagged
@@ -329,7 +330,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 0
       - m_Target: {fileID: 1815910029}
         m_TargetAssemblyTypeName: SliderStabllizer, Assembly-CSharp
         m_MethodName: loadVolumes
@@ -404,6 +405,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 52687564}
   m_CullTransparentMesh: 1
+--- !u!114 &52687569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 52687564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64c230af8d61bec4489d98eba2005f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverSound: {fileID: 8300000, guid: 963b462788d310543ad389a4babec916, type: 3}
 --- !u!1 &74888173
 GameObject:
   m_ObjectHideFlags: 0
@@ -1050,6 +1064,7 @@ GameObject:
   - component: {fileID: 573979406}
   - component: {fileID: 573979407}
   - component: {fileID: 573979408}
+  - component: {fileID: 573979409}
   m_Layer: 5
   m_Name: Slider_Music
   m_TagString: MusicVolume
@@ -1156,6 +1171,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 24100000, guid: d78fa27a7ef7b184488f43fdbb26e59b, type: 2}
+  clickSound: {fileID: 8300000, guid: 0dcad50d9c1986241852f3e349d08105, type: 3}
+  hoverSound: {fileID: 8300000, guid: 963b462788d310543ad389a4babec916, type: 3}
+--- !u!114 &573979409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 573979405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 14
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1815910029}
+          m_TargetAssemblyTypeName: SliderStabllizer, Assembly-CSharp
+          m_MethodName: playClick
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &575990488 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7064492322522968047, guid: 0b82a6c878dbf6944ad6d27d541362b4, type: 3}
@@ -1514,6 +1560,7 @@ GameObject:
   - component: {fileID: 864479361}
   - component: {fileID: 864479360}
   - component: {fileID: 864479359}
+  - component: {fileID: 864479362}
   m_Layer: 5
   m_Name: BTN_Back
   m_TagString: Untagged
@@ -1644,7 +1691,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
-        m_CallState: 2
+        m_CallState: 0
 --- !u!114 &864479360
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1683,6 +1730,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 864479357}
   m_CullTransparentMesh: 1
+--- !u!114 &864479362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 864479357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64c230af8d61bec4489d98eba2005f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverSound: {fileID: 8300000, guid: 963b462788d310543ad389a4babec916, type: 3}
 --- !u!1 &893594211
 GameObject:
   m_ObjectHideFlags: 0
@@ -1848,6 +1908,26 @@ PrefabInstance:
       value: She Astral on my Project
       objectReference: {fileID: 0}
     - target: {fileID: 270485429761877497, guid: f85443c851ea5214eaa980fec79db4f7, type: 3}
+      propertyPath: m_fontSize
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 270485429761877497, guid: f85443c851ea5214eaa980fec79db4f7, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 7f789366e6ca3664ebdd1b23f8a4352a, type: 2}
+    - target: {fileID: 270485429761877497, guid: f85443c851ea5214eaa980fec79db4f7, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 270485429761877497, guid: f85443c851ea5214eaa980fec79db4f7, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 8698689819410768382, guid: 7f789366e6ca3664ebdd1b23f8a4352a, type: 2}
+    - target: {fileID: 270485429761877497, guid: f85443c851ea5214eaa980fec79db4f7, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 270485429761877497, guid: f85443c851ea5214eaa980fec79db4f7, type: 3}
       propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
       value: 1801810542
       objectReference: {fileID: 0}
@@ -1972,7 +2052,13 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 492280831655998816, guid: f85443c851ea5214eaa980fec79db4f7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1783013912}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7951167177879235447, guid: f85443c851ea5214eaa980fec79db4f7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 973049370}
+    - targetCorrespondingSourceObject: {fileID: 1411913026221378568, guid: f85443c851ea5214eaa980fec79db4f7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 973049372}
   m_SourcePrefab: {fileID: 100100000, guid: f85443c851ea5214eaa980fec79db4f7, type: 3}
 --- !u!1 &973049360 stripped
 GameObject:
@@ -1989,6 +2075,32 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 492280831655998816, guid: f85443c851ea5214eaa980fec79db4f7, type: 3}
   m_PrefabInstance: {fileID: 973049358}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &973049370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 973049360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64c230af8d61bec4489d98eba2005f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverSound: {fileID: 8300000, guid: 963b462788d310543ad389a4babec916, type: 3}
+--- !u!114 &973049372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 973049361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64c230af8d61bec4489d98eba2005f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverSound: {fileID: 8300000, guid: 963b462788d310543ad389a4babec916, type: 3}
 --- !u!1 &981700603
 GameObject:
   m_ObjectHideFlags: 0
@@ -2172,6 +2284,7 @@ GameObject:
   - component: {fileID: 1497326105}
   - component: {fileID: 1497326104}
   - component: {fileID: 1497326103}
+  - component: {fileID: 1497326106}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2253,6 +2366,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1497326106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1497326102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56666c5a40171f54783dd416a44f42bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EventMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_MaxRayIntersections: 0
 --- !u!1 &1501937127
 GameObject:
   m_ObjectHideFlags: 0
@@ -2652,6 +2781,7 @@ GameObject:
   - component: {fileID: 1815910027}
   - component: {fileID: 1815910028}
   - component: {fileID: 1815910029}
+  - component: {fileID: 1815910030}
   m_Layer: 5
   m_Name: Slider_Master
   m_TagString: MasterVolume
@@ -2758,6 +2888,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 24100000, guid: d78fa27a7ef7b184488f43fdbb26e59b, type: 2}
+  clickSound: {fileID: 8300000, guid: 0dcad50d9c1986241852f3e349d08105, type: 3}
+  hoverSound: {fileID: 8300000, guid: 963b462788d310543ad389a4babec916, type: 3}
+--- !u!114 &1815910030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1815910026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 14
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1815910029}
+          m_TargetAssemblyTypeName: SliderStabllizer, Assembly-CSharp
+          m_MethodName: playClick
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1862268541
 GameObject:
   m_ObjectHideFlags: 0
@@ -2901,6 +3062,7 @@ GameObject:
   - component: {fileID: 1976766204}
   - component: {fileID: 1976766205}
   - component: {fileID: 1976766206}
+  - component: {fileID: 1976766207}
   m_Layer: 5
   m_Name: Slider_SoundFX
   m_TagString: SoundFXVolume
@@ -3007,6 +3169,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 24100000, guid: d78fa27a7ef7b184488f43fdbb26e59b, type: 2}
+  clickSound: {fileID: 8300000, guid: 0dcad50d9c1986241852f3e349d08105, type: 3}
+  hoverSound: {fileID: 8300000, guid: 963b462788d310543ad389a4babec916, type: 3}
+--- !u!114 &1976766207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1976766203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 14
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1815910029}
+          m_TargetAssemblyTypeName: SliderStabllizer, Assembly-CSharp
+          m_MethodName: playClick
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &2031802089
 GameObject:
   m_ObjectHideFlags: 0

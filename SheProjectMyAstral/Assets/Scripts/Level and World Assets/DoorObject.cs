@@ -7,8 +7,10 @@ public class DoorObject : MonoBehaviour
     #region Fields
     [SerializeField] private float doorOpeningSpeed;
     [SerializeField] private Transform doorOpenLocation;
+    [SerializeField] private AudioClip doorOpeningSoundClip;
     public bool bDoorLocked { get; private set; }
     private bool _bDoorOpening = false;
+    private bool _bDoorOpened = false;
     #endregion Fields
 
     #region Properties
@@ -53,6 +55,12 @@ public class DoorObject : MonoBehaviour
         }
         else
         {
+            if(!_bDoorOpened)
+            {
+                SoundFXManager.instance.playSoundFxClip(doorOpeningSoundClip, gameObject.transform, 1.0f);
+                _bDoorOpened = true;
+            }
+
             _bDoorOpening = true;
             return true;
         }
