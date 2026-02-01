@@ -149,6 +149,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 76898089828480723, guid: 91a67a6ccadccdd48927562627c043c7, type: 3}
+      propertyPath: _rotationSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 76898089828480723, guid: 91a67a6ccadccdd48927562627c043c7, type: 3}
+      propertyPath: _orientToFacePoint
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 76898089828480723, guid: 91a67a6ccadccdd48927562627c043c7, type: 3}
       propertyPath: _patrolPoints.Array.size
       value: 0
       objectReference: {fileID: 0}
@@ -159,6 +167,22 @@ PrefabInstance:
     - target: {fileID: 2726571358573119307, guid: 91a67a6ccadccdd48927562627c043c7, type: 3}
       propertyPath: m_Name
       value: TestEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 3431095506767319688, guid: 91a67a6ccadccdd48927562627c043c7, type: 3}
+      propertyPath: m_Size.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3431095506767319688, guid: 91a67a6ccadccdd48927562627c043c7, type: 3}
+      propertyPath: m_Size.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3431095506767319688, guid: 91a67a6ccadccdd48927562627c043c7, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 5325352189334439066, guid: 0f86cf2ef317d4843aa96d0797c64fce, type: 3}
+    - target: {fileID: 3431095506767319688, guid: 91a67a6ccadccdd48927562627c043c7, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4010274045525928432, guid: 91a67a6ccadccdd48927562627c043c7, type: 3}
       propertyPath: m_LocalPosition.x

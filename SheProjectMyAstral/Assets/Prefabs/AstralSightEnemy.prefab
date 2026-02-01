@@ -161,12 +161,16 @@ PrefabInstance:
       value: TestEnemy
       objectReference: {fileID: 0}
     - target: {fileID: 3431095506767319688, guid: 91a67a6ccadccdd48927562627c043c7, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 681007735684372993, guid: b6dc011a9d7140d478ff9adb53838fd4, type: 3}
+    - target: {fileID: 3431095506767319688, guid: 91a67a6ccadccdd48927562627c043c7, type: 3}
       propertyPath: m_Color.b
-      value: 0.7377358
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3431095506767319688, guid: 91a67a6ccadccdd48927562627c043c7, type: 3}
       propertyPath: m_Color.g
-      value: 0.7377358
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3431095506767319688, guid: 91a67a6ccadccdd48927562627c043c7, type: 3}
       propertyPath: m_Color.r
