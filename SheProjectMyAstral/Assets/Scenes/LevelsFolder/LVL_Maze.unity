@@ -299,7 +299,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 5.9773955
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -324,8 +324,8 @@ Transform:
   m_GameObject: {fileID: 147362974}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.04, y: 0, z: -10}
+  m_LocalScale: {x: 1.225, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -429,7 +429,7 @@ GameObject:
   - component: {fileID: 177592758}
   - component: {fileID: 177592760}
   - component: {fileID: 177592759}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: physicalWall (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -883,7 +883,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 491662900535359177, guid: 8265ee00abc889742ad52cfea297454e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 8265ee00abc889742ad52cfea297454e, type: 3}
 --- !u!1 &570248682
 GameObject:
@@ -2890,7 +2893,7 @@ GameObject:
   - component: {fileID: 1310918764}
   - component: {fileID: 1310918766}
   - component: {fileID: 1310918765}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: physicalWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
