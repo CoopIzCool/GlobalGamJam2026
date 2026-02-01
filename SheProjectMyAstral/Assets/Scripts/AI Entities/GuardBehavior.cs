@@ -19,7 +19,7 @@ public class GuardBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+       
     }
 
     //Delegate method called by the vision component. Notice how the vision component script has no idea this script exists yet they talk to eachother. Loose Coupling!
