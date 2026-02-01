@@ -122,13 +122,16 @@ public class Player : MonoBehaviour
         {
             isProjecting = false;
             projection.SetActive(false);
+            //projection.GetComponent<Collider2D>().enabled = false;
             projectionRadius.SetActive(false);
             projectionTimer = 0;
         }
         else
         {
+            projection.transform.position = transform.position;
             isProjecting = true;
             projectionRadius.SetActive(true);
+            projection.GetComponent<BoxCollider2D>().enabled = true;
             projection.SetActive(true);
         }
     }

@@ -11,7 +11,7 @@ public abstract class BaseButtonScript : MonoBehaviour, I_InteractableObject
         if (!_buttonPressed && DualButtonPressed()) 
         {
             _buttonPressed = true;
-            Debug.Log("Button Pressed");
+            //Debug.Log("Button Pressed");
         }
     }
 
@@ -23,7 +23,9 @@ public abstract class BaseButtonScript : MonoBehaviour, I_InteractableObject
     //Yeah this is weird abstraction. We may be doing weird 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Interact();
+        StartCoroutine(PostTriggerButtonCheck(collision));
+
+        print("Button Triggered");
     }
 
     protected bool DualButtonPressed()
@@ -33,6 +35,17 @@ public abstract class BaseButtonScript : MonoBehaviour, I_InteractableObject
             return true;
         }
         return dualButton.ButtonPressed;
+    }
+
+    IEnumerator PostTriggerButtonCheck(Collider2D collision)
+    {
+        yield return new WaitForEndOfFrame();
+        
+
+        if (collision.gameObject.activeInHierarchy)
+        {
+            Interact();
+        }
     }
 
 }
