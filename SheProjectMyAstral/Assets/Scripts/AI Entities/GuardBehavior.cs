@@ -32,6 +32,7 @@ public class GuardBehavior : MonoBehaviour
 
     private void CallGameOver()
     {
-        GameManager.Instance.TransitionTo("MainMenu");
+        print(GameManager.Instance == null);
+        GameManager.Instance.TransitionTo("GameOver");
     }
 }

@@ -39,7 +39,12 @@ public class GameManager : Singleton<GameManager>
     /// <summary>
     /// Sets up the state dictionary to be usable, if current state is not set beforehand we give it a default state of "main".
     /// </summary>
-    private void Awake()
+    //private void Awake()
+    //{
+
+    //}
+
+    private void Start()
     {
         print("I am awake");
         if (stateDictionary == null)
@@ -56,10 +61,10 @@ public class GameManager : Singleton<GameManager>
         {
             Debug.LogError("No game states detected at all! This is really bad!");
         }
-    }
 
-    private void Start()
-    {
+
+
+
         //TESTING BELOW:
 
         if (stateDictionary["MainMenu"] != null)
