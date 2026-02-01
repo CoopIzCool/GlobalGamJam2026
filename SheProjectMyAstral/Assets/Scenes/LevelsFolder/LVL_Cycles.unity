@@ -2238,6 +2238,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RefinedEnemy
       objectReference: {fileID: 0}
+    - target: {fileID: 4327234313057960549, guid: 3f8ab97a49eee704f95ad0731809ea67, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4885088538781817508, guid: 3f8ab97a49eee704f95ad0731809ea67, type: 3}
       propertyPath: _speed
       value: 0.9
