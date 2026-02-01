@@ -17133,6 +17133,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1693688354675140622, guid: 8f8234d063f1a6b42860fe30196ce8d0, type: 3}
+      propertyPath: transition
+      value: 
+      objectReference: {fileID: 49323005}
     - target: {fileID: 1931436804325127186, guid: 8f8234d063f1a6b42860fe30196ce8d0, type: 3}
       propertyPath: m_Name
       value: SuperManager

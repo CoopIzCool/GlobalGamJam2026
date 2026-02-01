@@ -20,6 +20,10 @@ public class BoilerPlate : Singleton<BoilerPlate>
         //SoundFXManager.instance.playSoundFxClip(click, transform, 1f);
         //}
         print("Going to " + SceneName);
+
+        // skip transition if it is not set
+        // ! ALL instances need a reference to a transition !
+        // It will skip it if even 1 doesn't have it, and each level tends to have, like, 3 of them.
         if (transition != null)
         {
             StartCoroutine(LoadScene(SceneName));
