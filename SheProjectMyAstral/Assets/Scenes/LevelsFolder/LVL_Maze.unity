@@ -1596,6 +1596,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelGate
       objectReference: {fileID: 0}
+    - target: {fileID: 6311579687258617746, guid: b12e108aef63e1c479b4f94eb5c47f25, type: 3}
+      propertyPath: nextLevelName
+      value: LVL_Cycles
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
