@@ -2409,6 +2409,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: SuperManager
       objectReference: {fileID: 0}
+    - target: {fileID: 7011528537495912129, guid: 8f8234d063f1a6b42860fe30196ce8d0, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7011528537495912129, guid: 8f8234d063f1a6b42860fe30196ce8d0, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7011528537495912129, guid: 8f8234d063f1a6b42860fe30196ce8d0, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7011528537495912129, guid: 8f8234d063f1a6b42860fe30196ce8d0, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7011528537495912129, guid: 8f8234d063f1a6b42860fe30196ce8d0, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7011528537495912129, guid: 8f8234d063f1a6b42860fe30196ce8d0, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -50
+      objectReference: {fileID: 0}
     - target: {fileID: 8255330895545197484, guid: 8f8234d063f1a6b42860fe30196ce8d0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -20.382181
