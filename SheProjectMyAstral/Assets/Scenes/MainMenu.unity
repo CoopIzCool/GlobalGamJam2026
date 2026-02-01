@@ -1471,8 +1471,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7f789366e6ca3664ebdd1b23f8a4352a, type: 2}
+  m_sharedMaterial: {fileID: 8698689819410768382, guid: 7f789366e6ca3664ebdd1b23f8a4352a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1905,7 +1905,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 270485429761877497, guid: f85443c851ea5214eaa980fec79db4f7, type: 3}
       propertyPath: m_text
-      value: She Astral on my Project
+      value: Circuit Breaker
       objectReference: {fileID: 0}
     - target: {fileID: 270485429761877497, guid: f85443c851ea5214eaa980fec79db4f7, type: 3}
       propertyPath: m_fontSize
@@ -1938,6 +1938,18 @@ PrefabInstance:
     - target: {fileID: 3090071749642139386, guid: f85443c851ea5214eaa980fec79db4f7, type: 3}
       propertyPath: m_CullTransparentMesh
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3873358647889604687, guid: f85443c851ea5214eaa980fec79db4f7, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 7f789366e6ca3664ebdd1b23f8a4352a, type: 2}
+    - target: {fileID: 3873358647889604687, guid: f85443c851ea5214eaa980fec79db4f7, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 8698689819410768382, guid: 7f789366e6ca3664ebdd1b23f8a4352a, type: 2}
+    - target: {fileID: 3873358647889604687, guid: f85443c851ea5214eaa980fec79db4f7, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3873358647889604687, guid: f85443c851ea5214eaa980fec79db4f7, type: 3}
       propertyPath: m_ActiveFontFeatures.Array.size
@@ -2037,6 +2049,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7740827288869979087, guid: f85443c851ea5214eaa980fec79db4f7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8140747662901678012, guid: f85443c851ea5214eaa980fec79db4f7, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 7f789366e6ca3664ebdd1b23f8a4352a, type: 2}
+    - target: {fileID: 8140747662901678012, guid: f85443c851ea5214eaa980fec79db4f7, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 8698689819410768382, guid: 7f789366e6ca3664ebdd1b23f8a4352a, type: 2}
+    - target: {fileID: 8140747662901678012, guid: f85443c851ea5214eaa980fec79db4f7, type: 3}
+      propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8140747662901678012, guid: f85443c851ea5214eaa980fec79db4f7, type: 3}
