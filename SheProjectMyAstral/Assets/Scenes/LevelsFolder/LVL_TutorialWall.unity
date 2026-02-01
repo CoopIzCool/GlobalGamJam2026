@@ -25156,7 +25156,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2921740744513411645, guid: dd69df4f26e32984383fa49e5717d4a8, type: 3}
       propertyPath: m_SortingOrder
-      value: -2
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3329042003889604808, guid: dd69df4f26e32984383fa49e5717d4a8, type: 3}
       propertyPath: switchColorContainers.Array.data[0].SwitchColor.b
@@ -26287,9 +26287,17 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4411959622090618367, guid: 3f32dcb3dc6d76d40a75c7b8ecd12536, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 4830263445746489966, guid: 3f32dcb3dc6d76d40a75c7b8ecd12536, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 4956082066193457724, guid: 3f32dcb3dc6d76d40a75c7b8ecd12536, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 6182464970242530828, guid: 3f32dcb3dc6d76d40a75c7b8ecd12536, type: 3}
       propertyPath: m_LocalScale.x
@@ -26398,7 +26406,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2921740744513411645, guid: dd69df4f26e32984383fa49e5717d4a8, type: 3}
       propertyPath: m_SortingOrder
-      value: -2
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3329042003889604808, guid: dd69df4f26e32984383fa49e5717d4a8, type: 3}
       propertyPath: switchColorContainers.Array.data[0].SwitchColor.b
