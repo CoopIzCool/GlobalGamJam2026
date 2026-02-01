@@ -30,7 +30,7 @@ public class BoilerPlate : Singleton<BoilerPlate>
 
     public void QuitGame()
     {
-        SoundFXManager.instance.playSoundFxClip(click, transform, 1f);
+        if (click != null) SoundFXManager.instance.playSoundFxClip(click, transform, 1f);
         StartCoroutine(QuitTimer());
         print("If you are seeing this the game should end right now.");
         //Hey future Ryan, if this breaks the build you are an unloveable chud and you should comment the line out below. 

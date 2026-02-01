@@ -31,9 +31,17 @@ public class Player : MonoBehaviour
     // FixedUpdate is where player logic is run
     private void FixedUpdate()
     {
-        Move();
-        CheckProjection();
-        UpdateExternal();
+        if (GameManager.Instance.CurrentState != GameManager.Instance.stateDictionary["GameOver"])
+        {
+            Move();
+            CheckProjection();
+            UpdateExternal();
+        }
+        else
+        {
+            spriteObj.GetComponent<Animator>().SetBool("isMoving", false);
+            isProjecting = false;
+        }
     }
     /// <summary>
     /// Gets the direction of context to use in Move and other functions.
@@ -41,14 +49,17 @@ public class Player : MonoBehaviour
     /// <param name="context">Vector2 input from keyboard or gamepad.</param>
     public void OnMove(InputAction.CallbackContext context)
     {
-        movementDirection = context.ReadValue<Vector2>();
-        if (context.canceled)
+        if (GameManager.Instance.CurrentState != GameManager.Instance.stateDictionary["GameOver"])
         {
-            spriteObj.GetComponent<Animator>().SetBool("isMoving", false);
-        }
-        else
-        {
-            spriteObj.GetComponent<Animator>().SetBool("isMoving", true);
+            movementDirection = context.ReadValue<Vector2>();
+            if (context.canceled)
+            {
+                spriteObj.GetComponent<Animator>().SetBool("isMoving", false);
+            }
+            else
+            {
+                spriteObj.GetComponent<Animator>().SetBool("isMoving", true);
+            }
         }
     }
     /// <summary>
@@ -57,7 +68,8 @@ public class Player : MonoBehaviour
     /// <param name="context">button input</param>
     public void OnProject(InputAction.CallbackContext context)
     {
-        SetProjection();
+        if (GameManager.Instance.CurrentState != GameManager.Instance.stateDictionary["GameOver"])
+            SetProjection();
     }
 
     /// <summary>
