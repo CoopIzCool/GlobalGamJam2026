@@ -6,6 +6,7 @@ public class GuardBehavior : MonoBehaviour
 {
     #region Fields
     private VisionComponent _visionComponent;
+    private bool gameOverCalled = false;
     #endregion Fields
 
     // Start is called before the first frame update
@@ -24,14 +25,11 @@ public class GuardBehavior : MonoBehaviour
     //Delegate method called by the vision component. Notice how the vision component script has no idea this script exists yet they talk to eachother. Loose Coupling!
     private void PlayerSpotted()
     {
+        if(gameOverCalled) return;
         //Add game over or whatever logic here.
         Debug.Log("Player Spotted");
-        CallGameOver();
-        
+        GameManager.Instance.TransitionTo("GameOver");
+        gameOverCalled = true;
     }
 
-    private void CallGameOver()
-    {
-        GameManager.Instance.TransitionTo("MainMenu");
-    }
 }

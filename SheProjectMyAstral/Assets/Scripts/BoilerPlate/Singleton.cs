@@ -10,7 +10,7 @@ public abstract class Singleton<T>:MonoBehaviour where T :MonoBehaviour
     public static T Instance;
 
 
-    private void Awake()
+    protected void Awake()
     {
         if (Instance == null)
         {

@@ -6,6 +6,7 @@ using UnityEngine;
 [Serializable]
 public class GameOverState : GameState
 {
+    //private GameObject GameOverCanvas;
     public override void FixedUpdateGameState()
     {
 
@@ -14,12 +15,15 @@ public class GameOverState : GameState
     public override void OnEnter()
     {
         //Put up Game Over Screen
+        EnteredEvent.Invoke();
         Debug.Log("YOU LOSE");
+        //GameOverCanvas.SetActive(false);
     }
 
     public override void OnExit()
     {
-
+        ExitEvent.Invoke();
+       //GameOverCanvas.SetActive(false);
     }
 
     public override void UpdateGameState()
