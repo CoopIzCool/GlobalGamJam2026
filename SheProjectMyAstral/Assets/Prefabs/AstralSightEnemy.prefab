@@ -399,6 +399,10 @@ PrefabInstance:
       propertyPath: alertIndicator
       value: 
       objectReference: {fileID: 7037182596260812068}
+    - target: {fileID: 3625570064769333387, guid: 91a67a6ccadccdd48927562627c043c7, type: 3}
+      propertyPath: guardAnimation
+      value: 
+      objectReference: {fileID: 250654057151268107}
     - target: {fileID: 4010274045525928432, guid: 91a67a6ccadccdd48927562627c043c7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.32
