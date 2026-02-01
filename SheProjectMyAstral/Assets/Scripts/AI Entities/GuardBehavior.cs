@@ -26,5 +26,12 @@ public class GuardBehavior : MonoBehaviour
     {
         //Add game over or whatever logic here.
         Debug.Log("Player Spotted");
+        CallGameOver();
+        
+    }
+
+    private void CallGameOver()
+    {
+        GameManager.Instance.TransitionTo("MainMenu");
     }
 }

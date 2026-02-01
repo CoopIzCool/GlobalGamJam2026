@@ -13,6 +13,9 @@ public class GameManager : Singleton<GameManager>
     //State Fields:
     [SerializeField] private MainMenu MENU_STATE;
     [SerializeField] private MainMenu OTHER_MENU_TEST_STATE;
+    [SerializeField] private NextLevelState NEXT_LEVEL_STATE;
+    [SerializeField] private GameOverState GAME_OVER_STATE;
+    
 
     /// <summary>
     /// Sets up the dictionary to be ready to find relevant states. 
@@ -22,6 +25,8 @@ public class GameManager : Singleton<GameManager>
     {
         stateDictionary.Add("MainMenu", MENU_STATE);
         stateDictionary.Add("OtherMenu", OTHER_MENU_TEST_STATE);
+        stateDictionary.Add("NextLevel", NEXT_LEVEL_STATE);
+        stateDictionary.Add("GameOver", GAME_OVER_STATE);
     }
     #endregion
 
@@ -36,6 +41,7 @@ public class GameManager : Singleton<GameManager>
     /// </summary>
     private void Awake()
     {
+        print("I am awake");
         if (stateDictionary == null)
         {
             stateDictionary = new Dictionary<string, GameState>();
@@ -64,6 +70,10 @@ public class GameManager : Singleton<GameManager>
         {
             Debug.Log("OtherMenu detected!");
         }
+        if (stateDictionary["GameOver"] != null)
+        {
+            Debug.Log("Game Over detected!");
+        }
 
         Debug.Log("Current state is: " + currentState.Name);
 
@@ -76,8 +86,8 @@ public class GameManager : Singleton<GameManager>
         Debug.Log("Transition from current to 'MainMenu'.");
         TransitionTo("MainMenu");
 
-        Debug.Log("Transition from current to 'MadeUpFakeState'");
-        TransitionTo("MadeUpFakeState");
+        //Debug.Log("Transition from current to 'MadeUpFakeState'");
+        //TransitionTo("MadeUpFakeState");
     }
 
     /// <summary>
