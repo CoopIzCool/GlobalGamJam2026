@@ -20,7 +20,14 @@ public class BoilerPlate : Singleton<BoilerPlate>
         //SoundFXManager.instance.playSoundFxClip(click, transform, 1f);
         //}
         print("Going to " + SceneName);
-        StartCoroutine(LoadScene(SceneName));
+        if (transition != null)
+        {
+            StartCoroutine(LoadScene(SceneName));
+        }
+        else
+        {
+            SceneManager.LoadScene(SceneName);
+        }
         _GAME_IS_PAUSED = false;
         Time.timeScale = 1.0f;
     }
