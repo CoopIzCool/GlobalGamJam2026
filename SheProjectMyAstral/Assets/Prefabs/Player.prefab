@@ -558,6 +558,10 @@ PrefabInstance:
       value: Projection
       objectReference: {fileID: 0}
     - target: {fileID: 9146242875450744090, guid: 198420578e1dd624abe7a7a2f536f8bf, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 9146242875450744090, guid: 198420578e1dd624abe7a7a2f536f8bf, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
