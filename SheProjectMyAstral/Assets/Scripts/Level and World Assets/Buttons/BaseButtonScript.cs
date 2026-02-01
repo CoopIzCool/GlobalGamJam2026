@@ -6,12 +6,25 @@ public abstract class BaseButtonScript : MonoBehaviour, I_InteractableObject
 {
     protected bool _buttonPressed = false;
     [SerializeField] private DualButtonPlacement dualButton;
+
+    [SerializeField] private Sprite defaultSprite;
+    [SerializeField] private Sprite pressedSprite;
     protected virtual void ButtonPressed()
     {
         if (!_buttonPressed && DualButtonPressed()) 
         {
             _buttonPressed = true;
+            if(defaultSprite != null)
+            {
+                StartCoroutine(ButtonPressedEffect());
+            }
             Debug.Log("Button Pressed");
+        }
+
+        if(defaultSprite == null)
+        {
+            defaultSprite = gameObject.GetComponent<SpriteRenderer>().sprite;
+            pressedSprite = defaultSprite;
         }
     }
 
@@ -33,6 +46,14 @@ public abstract class BaseButtonScript : MonoBehaviour, I_InteractableObject
             return true;
         }
         return dualButton.ButtonPressed;
+    }
+
+    IEnumerator ButtonPressedEffect()
+    {
+        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer.sprite = pressedSprite;
+        yield return new WaitForSeconds(0.5f);
+        spriteRenderer.sprite = defaultSprite;  
     }
 
 }
