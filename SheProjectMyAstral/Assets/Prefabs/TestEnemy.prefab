@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4010274045525928432}
   - component: {fileID: 3431095506767319688}
-  - component: {fileID: 5346837343189609891}
-  - component: {fileID: 7087230215658107589}
-  - component: {fileID: 76898089828480723}
+  - component: {fileID: 7055092746618157029}
+  - component: {fileID: 3625570064769333387}
+  - component: {fileID: 6803654249689700498}
   m_Layer: 0
   m_Name: TestEnemy
   m_TagString: Untagged
@@ -89,7 +89,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5346837343189609891
+--- !u!114 &7055092746618157029
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -118,7 +118,7 @@ MonoBehaviour:
       m_Calls: []
   pursuitTimer: 0
   predictionUpdate: 0
---- !u!114 &7087230215658107589
+--- !u!114 &3625570064769333387
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -130,7 +130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30b4470d3d78ff741975231e6e8b143b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &76898089828480723
+--- !u!114 &6803654249689700498
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

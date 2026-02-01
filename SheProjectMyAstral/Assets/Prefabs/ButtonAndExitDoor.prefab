@@ -212,6 +212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0d0867005d493f45a01b1c7c09e4471, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dualButton: {fileID: 0}
   doorAnswer: {fileID: 8842130926759584158}
 --- !u!1 &7851534575253521827
 GameObject:
@@ -361,6 +362,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doorOpeningSpeed: 5
   doorOpenLocation: {fileID: 5713156468731794276}
+  doorOpeningSoundClip: {fileID: 8300000, guid: b63eaeb15e64ae044b35d73f6bf7a881, type: 3}
 --- !u!1 &8178166275279613722
 GameObject:
   m_ObjectHideFlags: 0
