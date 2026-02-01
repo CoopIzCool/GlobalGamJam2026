@@ -16552,6 +16552,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2921740744513411645, guid: dd69df4f26e32984383fa49e5717d4a8, type: 3}
+      propertyPath: m_SortingOrder
+      value: -3
+      objectReference: {fileID: 0}
     - target: {fileID: 3329042003889604808, guid: dd69df4f26e32984383fa49e5717d4a8, type: 3}
       propertyPath: switchColorContainers.Array.data[0].SwitchColor.b
       value: 1
@@ -16896,6 +16900,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2921740744513411645, guid: dd69df4f26e32984383fa49e5717d4a8, type: 3}
+      propertyPath: m_SortingOrder
+      value: -3
+      objectReference: {fileID: 0}
     - target: {fileID: 3329042003889604808, guid: dd69df4f26e32984383fa49e5717d4a8, type: 3}
       propertyPath: switchColorContainers.Array.data[0].SwitchColor.b
       value: 1
@@ -16962,11 +16970,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8173956629500432217, guid: dd69df4f26e32984383fa49e5717d4a8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.59
+      value: 3.09
       objectReference: {fileID: 0}
     - target: {fileID: 8173956629500432217, guid: dd69df4f26e32984383fa49e5717d4a8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.42
+      value: -2.25
       objectReference: {fileID: 0}
     - target: {fileID: 8173956629500432217, guid: dd69df4f26e32984383fa49e5717d4a8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -18005,6 +18013,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2921740744513411645, guid: dd69df4f26e32984383fa49e5717d4a8, type: 3}
+      propertyPath: m_SortingOrder
+      value: -3
+      objectReference: {fileID: 0}
     - target: {fileID: 3329042003889604808, guid: dd69df4f26e32984383fa49e5717d4a8, type: 3}
       propertyPath: switchColorContainers.Array.data[0].SwitchColor.b
       value: 1
@@ -18083,7 +18095,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8173956629500432217, guid: dd69df4f26e32984383fa49e5717d4a8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.65
+      value: 3.06
       objectReference: {fileID: 0}
     - target: {fileID: 8173956629500432217, guid: dd69df4f26e32984383fa49e5717d4a8, type: 3}
       propertyPath: m_LocalPosition.y
