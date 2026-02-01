@@ -11,6 +11,11 @@ TagManager:
   - SoundFXVolume
   - Projection
   - Pro
+  - slider_master
+  - slider_music
+  - Undefined
+  - PauseButton
+  - ResumeButton
   layers:
   - Default
   - TransparentFX

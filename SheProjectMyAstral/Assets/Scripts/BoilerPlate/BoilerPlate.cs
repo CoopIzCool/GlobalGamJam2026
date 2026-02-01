@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class BoilerPlate : Singleton<BoilerPlate>
 {
@@ -20,7 +21,18 @@ public class BoilerPlate : Singleton<BoilerPlate>
         //SoundFXManager.instance.playSoundFxClip(click, transform, 1f);
         //}
         print("Going to " + SceneName);
-        StartCoroutine(LoadScene(SceneName));
+
+        // skip transition if it is not set
+        // ! ALL instances need a reference to a transition !
+        // It will skip it if even 1 doesn't have it, and each level tends to have, like, 3 of them.
+        if (transition != null)
+        {
+            StartCoroutine(LoadScene(SceneName));
+        }
+        else
+        {
+            SceneManager.LoadScene(SceneName);
+        }
         _GAME_IS_PAUSED = false;
         Time.timeScale = 1.0f;
     }
@@ -101,6 +113,25 @@ public class BoilerPlate : Singleton<BoilerPlate>
         else
         {
             PauseGame();
+        }
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            GameObject[] pb = GameObject.FindGameObjectsWithTag("PauseButton");
+            GameObject[] rb = GameObject.FindGameObjectsWithTag("ResumeButton");
+            Debug.Log("PB:" + pb.Length + ", RB:" + rb.Length);
+             if (rb.Length > 0)
+            {
+                rb[0].gameObject.GetComponent<Button>().onClick.Invoke();
+            }
+            else if (pb.Length > 0)
+            {
+                pb[0].gameObject.GetComponent<Button>().onClick.Invoke();
+            }
+            
         }
     }
 }
