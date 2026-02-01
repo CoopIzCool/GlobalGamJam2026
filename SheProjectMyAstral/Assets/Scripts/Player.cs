@@ -123,6 +123,8 @@ public class Player : MonoBehaviour
             isProjecting = false;
             projection.SetActive(false);
             projectionRadius.SetActive(false);
+            //This is here to resolve the color switch bug
+            projection.transform.position = transform.position;
             projectionTimer = 0;
         }
         else

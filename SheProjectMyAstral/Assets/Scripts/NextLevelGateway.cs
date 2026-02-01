@@ -25,7 +25,7 @@ public class NextLevelGateway : MonoBehaviour
     private void GoToNextLevel()
     {
         SoundFXManager.instance.playSoundFxClip(levelEnteredClip, gameObject.transform, 0.75f);
-        BoilerPlate.Instance.GoToScene(nextLevelName,false);
+        BoilerPlate.Instance.GoToScene(nextLevelName);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

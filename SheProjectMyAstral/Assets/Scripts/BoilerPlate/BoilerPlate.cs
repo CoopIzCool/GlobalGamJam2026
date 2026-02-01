@@ -10,12 +10,14 @@ public class BoilerPlate : Singleton<BoilerPlate>
     private float _FORMER_TIME_SCALE;
     [SerializeField] private AudioClip click;
     
-    public void GoToScene(string SceneName, bool playSFX = true)
+    public void GoToScene(string SceneName)
     {
-        if(playSFX)
-        {
-            SoundFXManager.instance.playSoundFxClip(click, transform, 1f);
-        }
+        //if(playSFX)
+        //{
+        ///Hey Jason.Taking this out for error sake 
+        //SoundFXManager.instance.playSoundFxClip(click, transform, 1f);
+        //}
+        print("Going to " + SceneName);
         SceneManager.LoadScene(SceneName);
         _GAME_IS_PAUSED = false;
         Time.timeScale = 1.0f;
